@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#141414"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="@dimen/j106dp"
+        android:layout_height="@dimen/j106dp"
+        android:layout_marginTop="@dimen/j12dp">
+
+        <com.ndtlg.carcontrol.view.MCircleSeekBar
+            android:id="@+id/mZJBCircleSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/mTextView_fen"
+            style="@style/text_style_17_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="100"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/mTextView_fenZ1"
+            style="@style/text_style_17_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/mTextView_fen"
+            android:layout_marginLeft="@dimen/j2dp"
+            android:layout_toRightOf="@+id/mTextView_fen"
+            android:text="分" />
+    </RelativeLayout>
+
+    <TextView
+        style="@style/text_style_15_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/j5dp"
+        android:text="诊断中..." />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/j5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/j8dp"
+            android:layout_marginLeft="@dimen/j10dp"
+            android:layout_weight="1">
+
+            <com.ndtlg.carcontrol.view.ColorfulProgressbar
+                android:id="@+id/colorful"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#333333" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_progressbar_bg" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/mTextView_percent"
+            style="@style/text_style_15_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/j10dp"
+            android:layout_marginRight="@dimen/j10dp"
+            android:text="1%" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/j10dp"
+        android:paddingRight="@dimen/j10dp">
+
+        <RelativeLayout
+            android:id="@+id/mRelativeLayout"
+            android:layout_width="@dimen/j124dp"
+            android:layout_height="@dimen/j228dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/pic_diagnosis_car_small" />
+
+            <ImageView
+                android:id="@+id/mImageView_sao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/pic_scan_line" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/mListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/j10dp"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:fadingEdge="none"
+            android:listSelector="#00000000" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/mImageView_dl"
+        style="@style/text_style_15_white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/j40dp"
+        android:layout_marginBottom="@dimen/j20dp"
+        android:layout_marginLeft="@dimen/j74dp"
+        android:layout_marginRight="@dimen/j74dp"
+        android:layout_marginTop="@dimen/j20dp"
+        android:background="@drawable/shape_login"
+        android:gravity="center"
+        android:text="停止诊断"
+        android:textColor="@color/A" />
+</LinearLayout>
+

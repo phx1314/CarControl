@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#141414" android:gravity="center_horizontal" android:orientation="vertical">
+     <RelativeLayout android:layout_width="match_parent" android:layout_height="48dip" android:background="#000">
+          <ImageButton android:id="@+id/btn_left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="#00000000" android:gravity="center" android:paddingLeft="@dimen/j10dp" android:src="@drawable/ic_nav_user" />
+          <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:gravity="center" android:orientation="vertical">
+               <TextView android:id="@+id/tv_title1" style="@style/text_style_13_white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:ellipsize="end" android:gravity="center" android:singleLine="true" android:text="欢迎您,123132132456" />
+               <TextView android:id="@+id/tv_title2" style="@style/text_style_11_white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:layout_marginTop="@dimen/j3dp" android:ellipsize="end" android:gravity="center" android:singleLine="true" android:text="同捷汽车，尊享版" />
+          </LinearLayout>
+          <ImageButton android:id="@+id/btn_right" style="@style/text_style_15_white" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:background="#00000000" android:gravity="center" android:paddingLeft="@dimen/j10dp" android:paddingRight="@dimen/j10dp" android:scaleType="fitCenter" android:src="@drawable/ic_nav_message" />
+     </RelativeLayout>
+     <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/j60dp" android:src="@drawable/pic_home_unbinding" />
+     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" />
+     <LinearLayout android:layout_width="match_parent" android:layout_height="@dimen/j40dp" android:layout_marginBottom="@dimen/j30dp" android:layout_marginLeft="@dimen/j30dp" android:layout_marginRight="@dimen/j30dp" android:layout_marginTop="@dimen/j15dp" android:background="@drawable/shape_login">
+          <TextView android:id="@+id/mImageView_dl" style="@style/text_style_15_white" android:layout_width="match_parent" android:layout_height="@dimen/j40dp" android:gravity="center" android:padding="@dimen/j6dp" android:text="绑定车辆，成为车主" android:textColor="@color/shouye_red" />
+     </LinearLayout>
+</LinearLayout>
+

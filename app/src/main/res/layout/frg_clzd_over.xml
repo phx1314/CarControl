@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#141414"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="@dimen/j106dp"
+                android:layout_height="@dimen/j106dp"
+                android:layout_marginTop="@dimen/j20dp"
+                android:background="@drawable/shape_yuan"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/mTextView_fen"
+                    style="@style/text_style_17_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="70"
+                    android:textColor="#fead2d"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/mTextView_fenZ1"
+                    style="@style/text_style_17_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/mTextView_fen"
+                    android:layout_marginLeft="@dimen/j2dp"
+                    android:layout_toRightOf="@+id/mTextView_fen"
+                    android:text="分"
+                    android:textColor="#fead2d" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/mTextView_jg"
+                style="@style/text_style_15_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/j8dp"
+                android:text="诊断完成，共检查项目28项" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/j40dp"
+                android:layout_marginTop="@dimen/j15dp"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/j20dp"
+                android:paddingRight="@dimen/j20dp">
+
+                <TextView
+                    android:id="@+id/mImageView_cxzd"
+                    style="@style/text_style_15_white"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_bg_red"
+                    android:gravity="center"
+                    android:text="重新诊断" />
+
+                <TextView
+                    android:id="@+id/mImageView_zdjl"
+                    style="@style/text_style_15_white"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/j14dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_login"
+                    android:gravity="center"
+                    android:text="诊断记录"
+                    android:textColor="@color/A" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/mTextView_count"
+                style="@style/text_style_15_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/j15dp"
+                android:drawableLeft="@drawable/ic_alarm"
+                android:gravity="center_vertical"
+                android:text="故障等级2，以下2项有问题"
+                android:textColor="@color/A" />
+
+            <TextView
+                android:id="@+id/mTextView_wt"
+                style="@style/text_style_13_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/j5dp"
+                android:lineSpacingExtra="@dimen/j6dp"
+                android:text="以下2项有问题\n以下2项有问题" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/j10dp"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/j100dp">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/j30dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="1dip"
+                        android:layout_height="@dimen/j14dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/j20dp"
+                        android:background="@color/tyD1" />
+
+                    <ImageView
+                        android:id="@+id/mImageView_gou"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_ok" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/mTextView_wt2"
+                    style="@style/text_style_15_white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/j5dp"
+                    android:lineSpacingExtra="@dimen/j6dp"
+                    android:text="以下2项有问题" />
+            </LinearLayout>
+
+            <com.mdx.framework.widget.MListView
+                android:id="@+id/mMListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="#00000000"
+                android:divider="@null"
+                android:fadingEdge="none"
+                android:listSelector="#00000000" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+

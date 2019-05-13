@@ -1,0 +1,3 @@
+include ':frameWidget'
+include ':andframework-release'
+include ':app'

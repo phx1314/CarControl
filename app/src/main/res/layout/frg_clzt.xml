@@ -1,0 +1,937 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#141414"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:background="#000">
+
+        <ImageButton
+            android:id="@+id/btn_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:gravity="center"
+            android:paddingLeft="@dimen/j10dp"
+            android:src="@drawable/ic_nav_user" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title1"
+                style="@style/text_style_13_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="欢迎您,123132132456" />
+
+            <TextView
+                android:id="@+id/tv_title2"
+                style="@style/text_style_11_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/j3dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="同捷汽车，尊享版" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btn_right"
+            style="@style/text_style_15_white"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="#00000000"
+            android:gravity="center"
+            android:paddingLeft="@dimen/j10dp"
+            android:paddingRight="@dimen/j10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_nav_message" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/j10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/j10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/mTextView_lc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="65"
+                        android:textColor="@color/A"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/j10dp"
+                        android:text="续航里程(km)"
+                        android:textColor="@color/gray"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/mTextView_dl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="70%"
+                        android:textColor="@color/A"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/j10dp"
+                        android:text="剩余电量"
+                        android:textColor="@color/gray"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/mTextView_wd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="65"
+                        android:textColor="@color/A"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/j10dp"
+                        android:text="车内温度(℃)"
+                        android:textColor="@color/gray"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.mdx.framework.widget.MImageView
+                android:id="@+id/mMImageView"
+                android:layout_width="@dimen/j300dp"
+                android:layout_height="@dimen/j116dp"
+                android:layout_marginTop="@dimen/j20dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pic_home_car_front1" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="@dimen/j10dp"
+                android:layout_marginRight="@dimen/j10dp"
+                android:layout_marginTop="@dimen/j20dp"
+                android:background="@color/tyD1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/j10dp">
+
+                <TextView
+                    style="@style/text_style_13_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="车辆信息"
+                    android:textColor="@color/A" />
+
+                <TextView
+                    android:id="@+id/mTextView_time"
+                    style="@style/text_style_11_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="更新" />
+
+                <ImageView
+                    android:id="@+id/mImageView_gx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_refresh" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/j10dp"
+                android:paddingRight="@dimen/j10dp">
+
+                <TextView
+                    android:id="@+id/mTextView_1"
+                    style="@style/text_style_13_white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="行驶里程：65(KM)" />
+
+                <TextView
+                    android:id="@+id/mTextView_2"
+                    style="@style/text_style_13_white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="电芯最高温度：29.0(℃)" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/j10dp"
+                android:paddingRight="@dimen/j10dp"
+                android:paddingTop="@dimen/j10dp">
+
+                <TextView
+                    android:id="@+id/mTextView_3"
+                    style="@style/text_style_13_white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="空调状态：65(KM)" />
+
+                <TextView
+                    android:id="@+id/mTextView_4"
+                    style="@style/text_style_13_white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="电芯最低温度：29.0(℃)" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/j10dp"
+                android:paddingRight="@dimen/j10dp"
+                android:paddingTop="@dimen/j10dp">
+
+                <TextView
+                    android:id="@+id/mTextView_5"
+                    style="@style/text_style_13_white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="平均车速：56km/h" />
+
+                <TextView
+                    android:id="@+id/mTextView_6"
+                    style="@style/text_style_13_white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="平均能耗：12kwh" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="@dimen/j10dp"
+                android:layout_marginRight="@dimen/j10dp"
+                android:layout_marginTop="@dimen/j12dp"
+                android:background="@color/tyD1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/j10dp">
+
+                <TextView
+                    style="@style/text_style_13_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="胎压温度检测"
+                    android:textColor="@color/A" />
+
+                <TextView
+                    android:id="@+id/mTextView_time_ty"
+                    style="@style/text_style_11_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="更新" />
+
+                <ImageView
+                    android:id="@+id/mImageView_gx_ty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_refresh" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/mTextView_ts"
+                style="@style/text_style_15_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_alarm"
+                android:gravity="center_vertical"
+                android:text="左前、右前轮胎压高"
+                android:textColor="@color/A"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/j4dp">
+
+                <ImageView
+                    android:id="@+id/mImageView_left1"
+                    android:layout_width="@dimen/j16dp"
+                    android:layout_height="@dimen/j38dp"
+                    android:layout_alignLeft="@+id/mImageView_c"
+                    android:layout_marginTop="@dimen/j36dp"
+                    android:src="@drawable/ic_home_tire_normal" />
+
+                <ImageView
+                    android:id="@+id/mImageView_right2"
+                    android:layout_width="@dimen/j16dp"
+                    android:layout_height="@dimen/j38dp"
+                    android:layout_alignBottom="@+id/mImageView_c"
+                    android:layout_alignRight="@+id/mImageView_c"
+                    android:layout_marginBottom="@dimen/j30dp"
+                    android:src="@drawable/ic_home_tire_normal" />
+
+                <ImageView
+                    android:id="@+id/mImageView_right1"
+                    android:layout_width="@dimen/j16dp"
+                    android:layout_height="@dimen/j38dp"
+                    android:layout_alignRight="@+id/mImageView_c"
+                    android:layout_marginTop="@dimen/j36dp"
+                    android:src="@drawable/ic_home_tire_normal" />
+
+                <ImageView
+                    android:id="@+id/mImageView_left2"
+                    android:layout_width="@dimen/j16dp"
+                    android:layout_height="@dimen/j38dp"
+                    android:layout_alignBottom="@+id/mImageView_c"
+                    android:layout_alignLeft="@+id/mImageView_c"
+                    android:layout_marginBottom="@dimen/j30dp"
+                    android:src="@drawable/ic_home_tire_normal" />
+
+                <ImageView
+                    android:id="@+id/mImageView_c"
+                    android:layout_width="@dimen/j100dp"
+                    android:layout_height="@dimen/j222dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/pic_home_car_front" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/j84dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/mImageView_left1"
+                    android:layout_alignTop="@+id/mImageView_left1"
+                    android:layout_marginRight="@dimen/j16dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/mTextView_left1"
+                        style="@style/text_style_13_white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/j10dp"
+                        android:text="210kpa\ndsadsa" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dip"
+                        android:layout_marginLeft="@dimen/j2dp"
+                        android:layout_marginTop="@dimen/j19dp"
+                        android:layout_weight="1"
+                        android:background="@color/tyD1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/j84dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/mImageView_left2"
+                    android:layout_alignTop="@+id/mImageView_left2"
+                    android:layout_marginRight="@dimen/j16dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/mTextView_left2"
+                        style="@style/text_style_13_white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/j10dp"
+                        android:text="210kpa\ndsadsa" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dip"
+                        android:layout_marginLeft="@dimen/j2dp"
+                        android:layout_marginTop="@dimen/j19dp"
+                        android:layout_weight="1"
+                        android:background="@color/tyD1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/j84dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/mImageView_right1"
+                    android:layout_alignTop="@+id/mImageView_right1"
+                    android:layout_marginLeft="@dimen/j16dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dip"
+                        android:layout_marginLeft="@dimen/j2dp"
+                        android:layout_marginTop="@dimen/j19dp"
+                        android:layout_weight="1"
+                        android:background="@color/tyD1" />
+
+                    <TextView
+                        android:id="@+id/mTextView_right1"
+                        style="@style/text_style_13_white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/j10dp"
+                        android:text="210kpa\ndsadsa" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/j84dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/mImageView_right2"
+                    android:layout_alignTop="@+id/mImageView_right2"
+                    android:layout_marginLeft="@dimen/j16dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dip"
+                        android:layout_marginLeft="@dimen/j2dp"
+                        android:layout_marginTop="@dimen/j19dp"
+                        android:layout_weight="1"
+                        android:background="@color/tyD1" />
+
+                    <TextView
+                        android:id="@+id/mTextView_right2"
+                        style="@style/text_style_13_white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/j10dp"
+                        android:text="210kpa\ndsadsa" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="@dimen/j10dp"
+                android:layout_marginRight="@dimen/j10dp"
+                android:layout_marginTop="@dimen/j12dp"
+                android:background="@color/tyD1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/j10dp">
+
+                <TextView
+                    style="@style/text_style_13_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="车辆状态"
+                    android:textColor="@color/A" />
+
+                <TextView
+                    android:id="@+id/mTextView_time_state"
+                    style="@style/text_style_11_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="更新" />
+
+                <ImageView
+                    android:id="@+id/mImageView_gx_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_refresh" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/text_style_13_gray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/j10dp"
+                android:text="门窗状态"
+                android:textColor="@color/A" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/j5dp"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/j10dp"
+                android:paddingRight="@dimen/j10dp">
+
+                <TextView
+                    android:id="@+id/mTextView_state1"
+                    style="@style/text_style_13_white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/ic_home_lfdoor_nor"
+                    android:gravity="center_vertical"
+                    android:text="左前门：关闭" />
+
+                <TextView
+                    android:id="@+id/mTextView_state2"
+                    style="@style/text_style_13_white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:drawableLeft="@drawable/ic_home_rfdoor_nor"
+                    android:gravity="center_vertical"
+                    android:text="右前门：关闭" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/j5dp"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/j10dp"
+                android:paddingRight="@dimen/j10dp">
+
+                <TextView
+                    android:id="@+id/mTextView_state3"
+                    style="@style/text_style_13_white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/ic_home_lbdoor_nor"
+                    android:gravity="center_vertical"
+                    android:text="左后门：关闭" />
+
+                <TextView
+                    android:id="@+id/mTextView_state4"
+                    style="@style/text_style_13_white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:drawableLeft="@drawable/ic_home_rbdoor_nor"
+                    android:gravity="center_vertical"
+                    android:text="右后门：关闭" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/j5dp"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/j10dp"
+                android:paddingRight="@dimen/j10dp">
+
+                <TextView
+                    android:id="@+id/mTextView_state5"
+                    style="@style/text_style_13_white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/ic_home_window_nor"
+                    android:gravity="center_vertical"
+                    android:text="左前窗：关闭" />
+
+                <TextView
+                    android:id="@+id/mTextView_state6"
+                    style="@style/text_style_13_white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:drawableLeft="@drawable/ic_home_window_nor"
+                    android:gravity="center_vertical"
+                    android:text="右前窗：关闭" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/j5dp"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/j10dp"
+                android:paddingRight="@dimen/j10dp">
+
+                <TextView
+                    android:id="@+id/mTextView_state7"
+                    style="@style/text_style_13_white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/ic_home_window_nor"
+                    android:gravity="center_vertical"
+                    android:text="左后窗：关闭" />
+
+                <TextView
+                    android:id="@+id/mTextView_state8"
+                    style="@style/text_style_13_white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:drawableLeft="@drawable/ic_home_window_nor"
+                    android:gravity="center_vertical"
+                    android:text="右后窗：关闭" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/j5dp"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/j10dp"
+                android:paddingRight="@dimen/j10dp">
+
+                <TextView
+                    android:id="@+id/mTextView_state9"
+                    style="@style/text_style_13_white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/ic_home_trunk_nor"
+                    android:gravity="center_vertical"
+                    android:text="后备箱：关闭" />
+
+                <TextView
+                    android:id="@+id/mTextView_state10"
+                    style="@style/text_style_13_white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:drawableLeft="@drawable/ic_home_skylight_nor"
+                    android:gravity="center_vertical"
+                    android:text="引擎盖：关闭" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/text_style_13_gray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/j10dp"
+                android:layout_marginTop="@dimen/j10dp"
+                android:text="灯光状态"
+                android:textColor="@color/A" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/j5dp"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/j10dp"
+                android:paddingRight="@dimen/j10dp">
+
+                <TextView
+                    android:id="@+id/mTextView_state11"
+                    style="@style/text_style_13_white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/ic_home_nearlight_nor"
+                    android:gravity="center_vertical"
+                    android:text="近光灯：关闭" />
+
+                <TextView
+                    android:id="@+id/mTextView_state12"
+                    style="@style/text_style_13_white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:drawableLeft="@drawable/ic_control_highlight_nor"
+                    android:gravity="center_vertical"
+                    android:text="远光灯：关闭" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/j5dp"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/j10dp"
+                android:paddingRight="@dimen/j10dp">
+
+                <TextView
+                    android:id="@+id/mTextView_state13"
+                    style="@style/text_style_13_white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/ic_home_leftlight_nor"
+                    android:gravity="center_vertical"
+                    android:text="左转向：关闭" />
+
+                <TextView
+                    android:id="@+id/mTextView_state14"
+                    style="@style/text_style_13_white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:drawableLeft="@drawable/ic_control_rightlight_nor"
+                    android:gravity="center_vertical"
+                    android:text="右转向：关闭" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/j5dp"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/j10dp"
+                android:paddingRight="@dimen/j10dp">
+
+                <TextView
+                    android:id="@+id/mTextView_state15"
+                    style="@style/text_style_13_white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/ic_home_forntfog_nor"
+                    android:gravity="center_vertical"
+                    android:text="前雾灯：关闭" />
+
+                <TextView
+                    android:id="@+id/mTextView_state16"
+                    style="@style/text_style_13_white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:drawableLeft="@drawable/ic_home_backfog_nor"
+                    android:gravity="center_vertical"
+                    android:text="后雾灯：关闭" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/j5dp"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/j10dp"
+                android:paddingRight="@dimen/j10dp">
+
+                <TextView
+                    android:id="@+id/mTextView_state17"
+                    style="@style/text_style_13_white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/ic_home_shownlight_nor"
+                    android:gravity="center_vertical"
+                    android:text="示廓灯：关闭" />
+
+                <TextView
+                    android:id="@+id/mTextView_state18"
+                    style="@style/text_style_13_white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:drawableLeft="@drawable/ic_home_ambient_nor"
+                    android:gravity="center_vertical"
+                    android:text="氛围灯：关闭" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/text_style_13_gray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/j10dp"
+                android:layout_marginTop="@dimen/j10dp"
+                android:text="中控状态"
+                android:textColor="@color/A" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/j5dp"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/j10dp"
+                android:paddingRight="@dimen/j10dp">
+
+                <TextView
+                    android:id="@+id/mTextView_state19"
+                    style="@style/text_style_13_white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/ic_home_start_nor"
+                    android:gravity="center_vertical"
+                    android:text="电门：关闭" />
+
+                <TextView
+                    android:id="@+id/mTextView_state21"
+                    style="@style/text_style_13_white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:drawableLeft="@drawable/ic_home_fortification_nor"
+                    android:gravity="center_vertical"
+                    android:text="设防：关闭" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/j5dp"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/j10dp"
+                android:paddingRight="@dimen/j10dp">
+
+                <TextView
+                    android:id="@+id/mTextView_state_lefts"
+                    style="@style/text_style_13_white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/ic_home_fdoorlock_nor"
+                    android:gravity="center_vertical"
+                    android:text="左门锁：关闭" />
+
+                <TextView
+                    android:id="@+id/mTextView_state_rights"
+                    style="@style/text_style_13_white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:drawableLeft="@drawable/ic_home_bdoorlock_nor"
+                    android:gravity="center_vertical"
+                    android:text="右门锁：关闭" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/j5dp"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/j10dp"
+                android:paddingRight="@dimen/j10dp">
+
+                <TextView
+                    android:id="@+id/mTextView_state23"
+                    style="@style/text_style_13_white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/ic_home_defending_nor"
+                    android:gravity="center_vertical"
+                    android:text="解防：关闭" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/text_style_13_gray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/j10dp"
+                android:layout_marginTop="@dimen/j10dp"
+                android:text="空调状态"
+                android:textColor="@color/A" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/j5dp"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/j10dp"
+                android:paddingRight="@dimen/j10dp">
+
+                <TextView
+                    android:id="@+id/mTextView_state20"
+                    style="@style/text_style_13_white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/ic_home_ac_nor"
+                    android:gravity="center_vertical"
+                    android:text="空调：关闭" />
+
+                <TextView
+                    android:id="@+id/mTextView_state24"
+                    style="@style/text_style_13_white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:drawableLeft="@drawable/ic_home_timing_nor"
+                    android:gravity="center_vertical"
+                    android:text="空调定时：关闭" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/j5dp"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/j10dp"
+                android:paddingRight="@dimen/j10dp">
+
+                <TextView
+                    android:id="@+id/mTextView_state22"
+                    style="@style/text_style_13_white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/ic_home_heating_nor"
+                    android:gravity="center_vertical"
+                    android:text="空调模式：对上" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+

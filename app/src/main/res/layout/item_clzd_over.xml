@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#141414" android:orientation="horizontal" android:paddingLeft="@dimen/j100dp">
+     <RelativeLayout android:layout_width="@dimen/j30dp" android:layout_height="match_parent">
+          <ImageView android:id="@+id/mImageView_l" android:layout_width="1dip" android:layout_height="match_parent" android:layout_centerHorizontal="true" android:background="@color/tyD1" />
+          <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_marginTop="@dimen/j4dp" android:src="@drawable/ic_option_selected" />
+     </RelativeLayout>
+     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+          <TextView android:id="@+id/mTextView_title" style="@style/text_style_13_white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/j5dp" android:drawableRight="@drawable/ic_up" android:gravity="center_vertical" android:lineSpacingExtra="@dimen/j6dp" android:text="发动机及相关附件" />
+          <TextView android:id="@+id/mTextView_wt" style="@style/text_style_13_white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/j20dp" android:layout_marginTop="@dimen/j5dp" android:lineSpacingExtra="@dimen/j6dp" android:text="以下2项有问题\n以下2项有问题" />
+     </LinearLayout>
+</LinearLayout>
+

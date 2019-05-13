@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+     <!-- Base application theme. -->
+     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+          <!-- Customize your theme here. -->
+          <item name="colorPrimary">@color/colorPrimary</item>
+          <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+          <item name="colorAccent">@color/colorAccent</item>
+     </style>
+     <style name="AppTheme_pub" parent="Theme.AppCompat.Light.DarkActionBar">
+          <item name="colorPrimary">@color/colorPrimary</item>
+          <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+          <item name="colorAccent">@color/colorAccent</item>
+          <item name="android:statusBarColor">#000000</item>
+          <item name="android:windowBackground">@color/white</item>
+          <item name="android:windowAnimationStyle">@style/MyActivitySiwtchAnimation</item>
+     </style>
+     <style name="MyActivitySiwtchAnimation">
+          <item name="android:activityOpenEnterAnimation">@anim/slide_in_from_right</item>
+          <item name="android:activityOpenExitAnimation">@anim/hold</item>
+          <!--<item name="android:activityCloseEnterAnimation">@anim/push_left_in</item>-->
+          <item name="android:activityCloseExitAnimation">@anim/slide_out_to_right</item>
+     </style>
+     <style name="Widget" />
+     <style name="Widget.ProgressBar">
+          <item name="android:indeterminateOnly">true</item>
+          <item name="android:indeterminateBehavior">repeat</item>
+          <item name="android:indeterminateDuration">3500</item>
+          <item name="android:minWidth">48dip</item>
+          <item name="android:maxWidth">48dip</item>
+          <item name="android:minHeight">48dip</item>
+          <item name="android:maxHeight">48dip</item>
+     </style>
+     <style name="Widget.ProgressBar.Vertical">
+          <item name="android:indeterminateOnly">false</item>
+          <item name="android:progressDrawable">@drawable/vertical_progress_bar</item>
+          <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+          <item name="android:minWidth">1dip</item>
+          <item name="android:maxWidth">12dip</item>
+     </style>
+     <style name="menu">
+          <item name="android:background">#00000000</item>
+          <item name="android:layout_width">wrap_content</item>
+          <item name="android:layout_height">match_parent</item>
+          <item name="android:button">@null</item>
+          <item name="android:gravity">center</item>
+          <item name="android:textColor">@drawable/select_text</item>
+          <item name="android:textSize">12sp</item>
+          <item name="android:layout_weight">1.0</item>
+          <item name="android:singleLine">true</item>
+          <item name="android:paddingTop">4.0dip</item>
+          <item name="android:paddingBottom">3.0dip</item>
+          <item name="android:drawablePadding">4dip</item>
+     </style>
+     <style name="menu_tab">
+          <item name="android:background">#000</item>
+     </style>
+</resources>
+

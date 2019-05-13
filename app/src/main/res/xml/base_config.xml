@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Base TempPath="CCT" BaseUri="http://47.95.207.192:8080/zncwd" AppId="appid" UseSdcard="true" UpdateUri="http://app.udows.com:82/version/mobile?methodno=MUpdate">
+    <param name="ErrorUpdateUrl">http://app.udows.com:82/version/mobile?methodno=MUpdateError</param>
+    <param name="source">1</param>
+    <param name="WebServiceNamespace">value</param>
+    <param name="WebServiceUrl">value</param>
+    <param name="DefaultFragment">com.ndtlg.carcontrol.frg.FrgLoading</param>
+</Base>

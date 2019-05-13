@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.framewidget.view.Headlayout
+        android:id="@+id/mHeadlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.androidkun.xtablayout.XTabLayout
+        android:id="@+id/mTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/j44dp"
+        android:layout_centerInParent="true"
+        app:xTabDisplayNum="3"
+        app:xTabDividerGravity="center"
+        app:xTabIndicatorColor="@color/A"
+        app:xTabIndicatorWidth="@dimen/j30dp"
+        app:xTabMode="fixed"
+        app:xTabSelectedTextColor="@color/A"
+        app:xTabSelectedTextSize="16sp"
+        app:xTabTextAppearance="@style/text_style_15_black"
+        app:xTabTextColor="@color/white"
+        app:xTabTextSize="16sp" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/mViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
+

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#141414"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/j12dp">
+
+        <com.ndtlg.carcontrol.view.EditTextWithDel
+            android:id="@+id/mEditText_phone"
+            style="@style/text_style_15_white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:gravity="center_vertical"
+            android:hint="请输入车牌号"
+            android:singleLine="true"
+            android:textColorHint="@color/gray"
+            android:textCursorDrawable="@drawable/my_cursor" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_marginLeft="@dimen/j12dp"
+        android:layout_marginRight="@dimen/j12dp"
+        android:background="@color/tyD1" />
+
+</LinearLayout>
+

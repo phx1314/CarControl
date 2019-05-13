@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="@dimen/j280dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_tk"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/j20dp"
+        android:paddingLeft="@dimen/j10dp"
+        android:paddingRight="@dimen/j10dp"
+        android:paddingTop="@dimen/j10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/mTextView_title"
+                style="@style/text_style_15_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="空调定时"
+                android:textColor="@color/A" />
+
+            <ImageView
+                android:id="@+id/mImageView_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_pop_close" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/j30dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/text_style_13_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="空调定时开启" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/mRadioGroup1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/j12dp"
+            android:checkedButton="@+id/mRadioButton0"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/mRadioButton0"
+                style="@style/text_style_13_white"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/j30dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_checked_ds"
+                android:button="@null"
+                android:gravity="center"
+                android:text="立即开启" />
+
+            <RadioButton
+                android:id="@+id/mRadioButton1"
+                style="@style/text_style_13_white"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/j30dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_checked_ds"
+                android:button="@null"
+
+                android:gravity="center"
+                android:text="5min后" />
+
+            <RadioButton
+                android:id="@+id/mRadioButton2"
+                style="@style/text_style_13_white"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/j30dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_checked_ds"
+                android:button="@null"
+
+                android:gravity="center"
+                android:text="10min后" />
+
+            <RadioButton
+                android:id="@+id/mRadioButton3"
+                style="@style/text_style_13_white"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/j30dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_checked_ds"
+                android:button="@null"
+
+                android:gravity="center"
+                android:text="30min后" />
+
+            <RadioButton
+                android:id="@+id/mRadioButton4"
+                style="@style/text_style_13_white"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/j30dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_checked_ds"
+                android:button="@null"
+
+                android:gravity="center"
+                android:text="60min后" />
+        </RadioGroup>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_marginTop="@dimen/j15dp"
+            android:background="@color/tyD1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/j15dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/text_style_13_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="空调开启时长" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/mRadioGroup2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/j12dp"
+            android:checkedButton="@+id/mRadioButton9"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/mRadioButton5"
+                style="@style/text_style_13_white"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/j30dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_checked_ds"
+                android:button="@null"
+
+                android:gravity="center"
+                android:text="5min" />
+
+            <RadioButton
+                android:id="@+id/mRadioButton6"
+                style="@style/text_style_13_white"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/j30dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_checked_ds"
+                android:button="@null"
+
+                android:gravity="center"
+                android:text="10min" />
+
+            <RadioButton
+                android:id="@+id/mRadioButton7"
+                style="@style/text_style_13_white"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/j30dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_checked_ds"
+                android:button="@null"
+
+                android:gravity="center"
+                android:text="30min" />
+
+            <RadioButton
+                android:id="@+id/mRadioButton8"
+                style="@style/text_style_13_white"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/j30dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_checked_ds"
+                android:button="@null"
+
+                android:gravity="center"
+                android:text="60min" />
+
+            <RadioButton
+                android:id="@+id/mRadioButton9"
+                style="@style/text_style_13_white"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/j30dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_checked_ds"
+                android:button="@null"
+
+                android:gravity="center"
+                android:text="常开" />
+        </RadioGroup>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_marginTop="@dimen/j15dp"
+            android:background="@color/tyD1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/j10dp"
+            android:layout_marginRight="@dimen/j10dp"
+            android:layout_marginTop="@dimen/j15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/mImageView_cancel"
+                style="@style/text_style_15_white"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/j40dp"
+                android:layout_marginRight="@dimen/j15dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_login2"
+                android:gravity="center"
+                android:text="取消定时" />
+
+            <TextView
+                android:id="@+id/mImageView_dl"
+                style="@style/text_style_15_white"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/j40dp"
+                android:layout_weight="1"
+
+
+                android:background="@drawable/shape_login"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/A" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>
+

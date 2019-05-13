@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#141414"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#141414"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/j20dp"
+                android:src="@drawable/pic_diagnosis_car_small" />
+
+            <TextView
+                android:id="@+id/mImageView_dl"
+                style="@style/text_style_15_white"
+                android:layout_width="@dimen/j150dp"
+                android:layout_height="@dimen/j40dp"
+                android:layout_marginTop="@dimen/j15dp"
+                android:background="@drawable/shape_login"
+                android:gravity="center"
+                android:text="开始诊断"
+                android:textColor="@color/A" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="@dimen/j10dp"
+                android:layout_marginRight="@dimen/j10dp"
+                android:layout_marginTop="@dimen/j20dp"
+                android:background="@color/tyD1" />
+
+            <LinearLayout
+                android:id="@+id/mLinearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/j10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_style_13_gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="车辆远程诊断"
+                        android:textColor="@color/A" />
+
+                    <TextView
+                        android:id="@+id/mTextView_time"
+                        style="@style/text_style_11_gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/ic_detail"
+                        android:gravity="center_vertical"
+                        android:text="2018.2.03 更新 " />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/j15dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/j60dp"
+                        android:layout_height="@dimen/j60dp"
+                        android:background="@drawable/shape_yuan"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/mTextView_fen"
+                            style="@style/text_style_17_black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="70"
+                            android:textColor="#fead2d" />
+
+                        <TextView
+                            android:id="@+id/mTextView_fenZ1"
+                            style="@style/text_style_11_black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/mTextView_fen"
+                            android:layout_marginLeft="@dimen/j2dp"
+                            android:layout_toRightOf="@+id/mTextView_fen"
+                            android:text="分"
+                            android:textColor="#fead2d" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/j12dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/mTextView_count"
+                            style="@style/text_style_15_black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_alarm"
+                            android:gravity="center_vertical"
+                            android:text="以下2项有问题"
+                            android:textColor="@color/A" />
+
+                        <TextView
+                            android:id="@+id/mTextView_wt"
+                            style="@style/text_style_15_white"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/j25dp"
+                            android:layout_marginTop="@dimen/j5dp"
+                            android:lineSpacingExtra="@dimen/j6dp"
+                            android:text="以下2项有问题\n以下2项有问题" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
