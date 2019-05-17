@@ -125,7 +125,7 @@ public class FrgHome extends BaseFrg implements OnCheckChange {
                             final AppBean appBean = getAppBeanFromString(result);
                             new AlertDialog.Builder(getContext())
                                     .setTitle("版本更新")
-                                    .setMessage("检查到新版本，是否更新")
+                                    .setMessage("检查到新版本，是否更新").setCancelable(false)
                                     .setNegativeButton(
                                             "确定",
                                             new DialogInterface.OnClickListener() {
