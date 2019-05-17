@@ -11,16 +11,15 @@
 
 package com.ndtlg.carcontrol.item;
 
-import com.ndtlg.carcontrol.R;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
-import android.view.ViewGroup;
-
 import android.view.View;
-import android.widget.TextView;
+import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.ndtlg.carcontrol.R;
 
 
 
