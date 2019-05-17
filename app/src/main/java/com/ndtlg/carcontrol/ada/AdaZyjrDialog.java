@@ -11,13 +11,14 @@
 
 package com.ndtlg.carcontrol.ada;
 
-import java.util.List;
-import com.mdx.framework.adapter.MAdapter;
 import android.content.Context;
-import android.view.ViewGroup;
 import android.view.View;
+import android.view.ViewGroup;
 
+import com.mdx.framework.adapter.MAdapter;
 import com.ndtlg.carcontrol.item.ZyjrDialog;
+
+import java.util.List;
 
 public class AdaZyjrDialog extends MAdapter<String>{
 
@@ -33,7 +34,7 @@ public class AdaZyjrDialog extends MAdapter<String>{
             convertView = ZyjrDialog.getView(getContext(), parent);;
         }
         ZyjrDialog mZyjrDialog=(ZyjrDialog) convertView.getTag();
-        mZyjrDialog.set(item);
+//        mZyjrDialog.set(item);
         return convertView;
     }
 }

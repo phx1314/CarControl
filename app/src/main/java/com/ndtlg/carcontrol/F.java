@@ -46,6 +46,10 @@ public class F {
     public static String vehicleActivate = api2 + "/rest/cmd/vehicleActivate";
     public static String window = api2 + "/rest/cmd/window";
     public static String findCar = api2 + "rest/cmd/findCar";
+    public static String findCarByHonk = api2 + "/rest/cmd/findCarByHonk";
+    public static String findCarByFlashLamp = api2 + "/rest/cmd/findCarByFlashLamp";
+    public static String queryLatestLocation = api2 + "/rest/queryLatestLocation";
+    public static String queryLocationList = api2 + "/rest/cmd/queryLocationList";
     public static String airCondition = api2 + "/rest/cmd/airCondition";
     public static String queryAirConditionState = api2 + "/rest/cmd/queryAirConditionState";
     public static String luggage = api2 + "/rest/cmd/luggage";

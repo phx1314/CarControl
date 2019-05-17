@@ -126,8 +126,7 @@
                 style="@style/text_style_13_white"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/j14dp"
-                android:text="常州市新北区" />
+                android:layout_marginTop="@dimen/j14dp" />
 
             <ImageView
                 android:layout_width="match_parent"

@@ -27,18 +27,26 @@ import com.baidu.location.BDLocationListener;
 import com.baidu.location.LocationClient;
 import com.baidu.location.LocationClientOption;
 import com.baidu.mapapi.map.BaiduMap;
+import com.baidu.mapapi.map.BitmapDescriptor;
+import com.baidu.mapapi.map.BitmapDescriptorFactory;
 import com.baidu.mapapi.map.MapStatus;
 import com.baidu.mapapi.map.MapStatusUpdateFactory;
 import com.baidu.mapapi.map.MapView;
+import com.baidu.mapapi.map.MarkerOptions;
 import com.baidu.mapapi.map.MyLocationData;
+import com.baidu.mapapi.map.OverlayOptions;
 import com.baidu.mapapi.model.LatLng;
+import com.baidu.mapapi.utils.CoordinateConverter;
 import com.framewidget.view.Headlayout;
 import com.mdx.framework.activity.TitleAct;
 import com.mdx.framework.utility.Helper;
 import com.mdx.framework.utility.permissions.PermissionRequest;
 import com.ndtlg.carcontrol.R;
 import com.ndtlg.carcontrol.bean.BeanfindCar;
+import com.ndtlg.carcontrol.bean.BeanfindCarByHonk;
+import com.ndtlg.carcontrol.model.ModelPub;
 import com.ndtlg.carcontrol.model.ModelfindCar;
+import com.ndtlg.carcontrol.model.ModelqueryLatestLocation;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -46,7 +54,10 @@ import java.io.IOException;
 import java.io.InputStream;
 
 import static com.ndtlg.carcontrol.F.findCar;
+import static com.ndtlg.carcontrol.F.findCarByFlashLamp;
+import static com.ndtlg.carcontrol.F.findCarByHonk;
 import static com.ndtlg.carcontrol.F.json2Model;
+import static com.ndtlg.carcontrol.F.queryLatestLocation;
 
 
 public class FrgLocation extends BaseFrg {
@@ -152,14 +163,26 @@ public class FrgLocation extends BaseFrg {
                 mBaiduMap.animateMapStatus(MapStatusUpdateFactory.newMapStatus(builder.build()));
 
                 mLinearLayout_ddh.setVisibility(View.GONE);
-                mTextView_xun.setVisibility(View.VISIBLE);
-                mLinearLayout_wz.setVisibility(View.GONE);
+                mTextView_xun.setVisibility(View.GONE);
+                mLinearLayout_wz.setVisibility(View.VISIBLE);
             }
         });
         mTextView_xun.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 loadJsonUrl(findCar, new BeanfindCar("1"));
+            }
+        });
+        mTextView_sd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                loadJsonUrl(findCarByFlashLamp, new BeanfindCarByHonk());
+            }
+        });
+        mTextView_md.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                loadJsonUrl(findCarByHonk, new BeanfindCarByHonk());
             }
         });
         mTextView_2.setOnClickListener(new View.OnClickListener() {
@@ -184,6 +207,8 @@ public class FrgLocation extends BaseFrg {
                 });
             }
         });
+        loadJsonUrl(queryLatestLocation, new BeanfindCarByHonk());
+
     }
 
     // 设置个性化地图config文件路径
@@ -237,7 +262,7 @@ public class FrgLocation extends BaseFrg {
             }
             mCurrentLat = location.getLatitude();
             mCurrentLon = location.getLongitude();
-            mTextView_location.setText(location.getAddrStr());
+//            mTextView_location.setText(location.getAddrStr());
             MyLocationData locData = new MyLocationData.Builder()
                     .accuracy(location.getRadius())
                     // 此处设置开发者获取到的方向信息，顺时针0-360
@@ -246,11 +271,11 @@ public class FrgLocation extends BaseFrg {
             mBaiduMap.setMyLocationData(locData);
             if (isFirstLoc) {
                 isFirstLoc = false;
-                LatLng ll = new LatLng(location.getLatitude(),
-                        location.getLongitude());
-                MapStatus.Builder builder = new MapStatus.Builder();
-                builder.target(ll).zoom(18.0f);
-                mBaiduMap.animateMapStatus(MapStatusUpdateFactory.newMapStatus(builder.build()));
+//                LatLng ll = new LatLng(location.getLatitude(),
+//                        location.getLongitude());
+//                MapStatus.Builder builder = new MapStatus.Builder();
+//                builder.target(ll).zoom(18.0f);
+//                mBaiduMap.animateMapStatus(MapStatusUpdateFactory.newMapStatus(builder.build()));
             }
         }
 
@@ -294,6 +319,33 @@ public class FrgLocation extends BaseFrg {
 //                    .icon(bitmap);
 ////在地图上添加Marker，并显示
 //            mBaiduMap.addOverlay(option);
+        } else if (methodName.equals(findCarByHonk) || methodName.equals(findCarByFlashLamp)) {
+            ModelPub mModelPub = (ModelPub) json2Model(content, ModelPub.class);
+            Helper.toast(mModelPub.info, getContext());
+        } else if (methodName.equals(queryLatestLocation)) {
+            ModelqueryLatestLocation mModelqueryLatestLocation = (ModelqueryLatestLocation) json2Model(content, ModelqueryLatestLocation.class);
+            mTextView_location.setText(mModelqueryLatestLocation.content.address);
+            LatLng ll = new LatLng(Double.valueOf(mModelqueryLatestLocation.content.lat),
+                    Double.valueOf(mModelqueryLatestLocation.content.lng));
+            CoordinateConverter converter = new CoordinateConverter()
+                    .from(CoordinateConverter.CoordType.GPS)
+                    .coord(ll);
+
+            LatLng desLatLng = converter.convert();
+//            LatLng desLatLng = new LatLng(
+//                    31.818860807951893,120.00030384723702);
+            BitmapDescriptor bitmap = BitmapDescriptorFactory
+                    .fromResource(R.drawable.ic_location_car);
+            OverlayOptions option = new MarkerOptions()
+                    .position(desLatLng)
+                    .icon(bitmap);
+//在地图上添加Marker，并显示
+            mBaiduMap.addOverlay(option);
+
+            MapStatus.Builder builder = new MapStatus.Builder();
+            builder.target(desLatLng).zoom(18.0f);
+            mBaiduMap.animateMapStatus(MapStatusUpdateFactory.newMapStatus(builder.build()));
+
         }
     }
 

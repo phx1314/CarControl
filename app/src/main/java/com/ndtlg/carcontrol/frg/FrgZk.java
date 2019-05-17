@@ -28,6 +28,7 @@ import com.ndtlg.carcontrol.item.AqyzDialog;
 import com.ndtlg.carcontrol.item.DsDialog;
 import com.ndtlg.carcontrol.item.JrzlDialog;
 import com.ndtlg.carcontrol.item.KtmsDialog;
+import com.ndtlg.carcontrol.item.ZyjrDialog;
 import com.ndtlg.carcontrol.pop.PopShowLeftDm;
 
 import static com.ndtlg.carcontrol.F.secToTime;
@@ -263,6 +264,18 @@ public class FrgZk extends BaseFrg {
                     @Override
                     public void goReturnDo(Dialog mDialog) {
                         ((KtmsDialog) view1.getTag()).set(mDialog);
+                    }
+                });
+            }
+        });
+        mLinearLayout_10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final View view1 = ZyjrDialog.getView(getContext(), null);
+                F.showCenterDialog(getActivity(), view1, new CallBackOnly() {
+                    @Override
+                    public void goReturnDo(Dialog mDialog) {
+                        ((ZyjrDialog) view1.getTag()).set(mDialog);
                     }
                 });
             }
