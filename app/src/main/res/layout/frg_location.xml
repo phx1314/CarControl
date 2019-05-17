@@ -112,8 +112,7 @@
             android:background="#000000"
             android:orientation="vertical"
             android:paddingLeft="@dimen/j10dp"
-            android:paddingTop="@dimen/j14dp"
-            android:visibility="gone">
+            android:paddingTop="@dimen/j14dp">
 
             <TextView
                 style="@style/text_style_13_white"
@@ -185,13 +184,15 @@
                 <ImageView
                     android:layout_width="1dip"
                     android:layout_height="@dimen/j20dp"
-                    android:background="@color/A" />
+                    android:background="@color/A"
+                    android:visibility="gone" />
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:visibility="gone">
 
                     <TextView
                         android:id="@+id/mTextView_dh"

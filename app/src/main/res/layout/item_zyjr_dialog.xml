@@ -27,7 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="空调"
+                android:text="座椅加热"
                 android:textColor="@color/A" />
 
             <ImageView
@@ -38,10 +38,11 @@
                 android:src="@drawable/ic_pop_close" />
         </RelativeLayout>
 
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/j15dp"
+            android:layout_marginTop="@dimen/j25dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -50,145 +51,152 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="开关" />
-
-            <RadioGroup
-                android:id="@+id/mRadioGroup"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:checkedButton="@+id/mRadioButton1"
-                android:orientation="horizontal">
-
-                <RadioButton
-                    android:id="@+id/mRadioButton1"
-                    style="@style/text_style_15_white"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/j10dp"
-                    android:layout_weight="1"
-                    android:button="@drawable/btn_checked_kg"
-                    android:drawablePadding="@dimen/j5dp"
-                    android:gravity="center_vertical"
-                    android:text="OFF" />
-
-                <RadioButton
-                    android:id="@+id/mRadioButton2"
-                    style="@style/text_style_15_white"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:button="@drawable/btn_checked_kg"
-                    android:drawablePadding="@dimen/j5dp"
-                    android:gravity="center_vertical"
-                    android:text="A/C" />
-
-                <RadioButton
-                    android:id="@+id/mRadioButton3"
-                    style="@style/text_style_15_white"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:button="@drawable/btn_checked_kg"
-                    android:drawablePadding="@dimen/j5dp"
-                    android:gravity="center_vertical"
-                    android:text="PTC" />
-
-                <RadioButton
-                    android:id="@+id/mRadioButton4"
-                    style="@style/text_style_15_white"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:button="@drawable/btn_checked_kg"
-                    android:drawablePadding="@dimen/j5dp"
-                    android:gravity="center_vertical"
-                    android:text="自动" />
-            </RadioGroup>
-        </LinearLayout>
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="1dip"
-            android:layout_marginTop="@dimen/j10dp"
-            android:background="@color/tyD1" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/j15dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+                android:text="驾驶座(L)" />
 
             <TextView
-                android:id="@+id/mTextView_wdset"
-                style="@style/text_style_13_white"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="温度设置" />
-
-            <TextView
-                android:id="@+id/mTextView_wd"
+                android:id="@+id/mTextView_jsz"
                 style="@style/text_style_15_white"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_marginLeft="@dimen/j10dp"
-                android:text="16℃" />
+                android:text="3档" />
         </LinearLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/mImageView_bg"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/mSeekBar"
-                android:layout_marginLeft="@dimen/j10dp"
-                android:layout_marginRight="@dimen/j12dp"
-                android:background="@drawable/ic_bar_cooling" />
-
-            <SeekBar
-                android:id="@+id/mSeekBar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/j10dp"
-                android:max="28"
-                android:progressBackgroundTint="#00000000"
-                android:progressTint="#00000000"
-                android:thumb="@drawable/ic_bar_arrow" />
-        </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/j1dp"
+            android:layout_marginLeft="@dimen/j5dp"
+            android:layout_marginRight="@dimen/j5dp"
+            android:layout_marginTop="@dimen/j15dp"
+            android:gravity="center"
             android:orientation="horizontal">
 
-            <TextView
-                style="@style/text_style_13_gray"
+            <ImageView
+                android:id="@+id/mImageView_jian_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="16℃" />
+                android:src="@drawable/ic_minus" />
 
-            <TextView
-                style="@style/text_style_11_gray"
+            <View
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="以0.5℃为最小单位" />
+                android:layout_height="@dimen/j1dp"
+                android:layout_weight="1" />
 
-            <TextView
-                style="@style/text_style_13_gray"
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="bottom|center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/mImageView_kuai_1"
+                    android:layout_width="@dimen/j20dp"
+                    android:layout_height="@dimen/j4dp"
+                    android:background="@color/gray" />
+
+                <TextView
+                    style="@style/text_style_11_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/j2dp"
+                    android:text="0" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/j1dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="bottom|center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/mImageView_kuai_2"
+                    android:layout_width="@dimen/j20dp"
+                    android:layout_height="@dimen/j4dp"
+                    android:background="@color/gray" />
+
+                <TextView
+                    style="@style/text_style_11_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/j2dp"
+                    android:text="1" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/j1dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="bottom|center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/mImageView_kuai_3"
+                    android:layout_width="@dimen/j20dp"
+                    android:layout_height="@dimen/j4dp"
+                    android:background="@color/gray" />
+
+                <TextView
+                    style="@style/text_style_11_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/j2dp"
+                    android:text="2" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/j1dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="bottom|center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/mImageView_kuai_4"
+                    android:layout_width="@dimen/j20dp"
+                    android:layout_height="@dimen/j4dp"
+                    android:background="@color/gray" />
+
+                <TextView
+                    style="@style/text_style_11_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/j2dp"
+                    android:text="3" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/j1dp"
+                android:layout_weight="1" />
+
+
+            <ImageView
+                android:id="@+id/mImageView_jia_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="30℃" />
+                android:src="@drawable/ic_add" />
         </LinearLayout>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_marginTop="@dimen/j15dp"
+            android:background="@color/tyD1" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -203,7 +211,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="风速设置" />
+                android:text="副驾驶座(R)" />
 
             <TextView
                 android:id="@+id/mTextView_fs"
@@ -212,7 +220,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_marginLeft="@dimen/j10dp"
-                android:text="0档" />
+                android:text="关闭" />
         </LinearLayout>
 
         <LinearLayout
@@ -335,55 +343,6 @@
                 android:layout_height="@dimen/j1dp"
                 android:layout_weight="1" />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="bottom|center_horizontal"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/mImageView_kuai5"
-                    android:layout_width="@dimen/j20dp"
-                    android:layout_height="@dimen/j4dp"
-                    android:background="@color/gray" />
-
-                <TextView
-                    style="@style/text_style_11_gray"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/j2dp"
-                    android:text="4" />
-            </LinearLayout>
-
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/j1dp"
-                android:layout_weight="1" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="bottom|center_horizontal"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/mImageView_kuai6"
-                    android:layout_width="@dimen/j20dp"
-                    android:layout_height="@dimen/j4dp"
-                    android:background="@color/gray" />
-
-                <TextView
-                    style="@style/text_style_11_gray"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/j2dp"
-                    android:text="5" />
-            </LinearLayout>
-
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/j1dp"
-                android:layout_weight="1" />
 
             <ImageView
                 android:id="@+id/mImageView_jia"
@@ -392,41 +351,6 @@
                 android:src="@drawable/ic_add" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/j15dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <TextView
-                style="@style/text_style_13_white"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="空气净化" />
-
-            <TextView
-                android:id="@+id/mTextView_kg"
-                style="@style/text_style_15_white"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_marginLeft="@dimen/j10dp"
-                android:layout_weight="1"
-                android:text="开启" />
-
-            <ToggleButton
-                android:id="@+id/mToggleButton1"
-                style="@style/MyToggleButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/j8dp"
-                android:background="#00000000"
-                android:checked="false"
-                android:textOff=""
-                android:textOn="" />
-        </LinearLayout>
 
         <ImageView
             android:layout_width="match_parent"

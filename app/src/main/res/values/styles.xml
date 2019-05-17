@@ -55,5 +55,8 @@
      <style name="menu_tab">
           <item name="android:background">#000</item>
      </style>
+     <style name="MyToggleButton" parent="@android:style/Widget.CompoundButton">
+          <item name="android:button">@drawable/setting_checkbox_button</item>
+     </style>
 </resources>
 

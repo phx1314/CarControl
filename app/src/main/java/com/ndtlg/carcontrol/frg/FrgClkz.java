@@ -352,9 +352,11 @@ public class FrgClkz extends BaseFrg {
         list_title.add("门窗");
         list_title.add("灯光");
         list_title.add("中控");
+        list_title.add("其他");
         fragments.add(new FrgMc());
         fragments.add(new FrgDg());
         fragments.add(new FrgZk());
+        fragments.add(new FrgQt());
         mViewPager.setAdapter(new MFragmentAdapter(
                 getChildFragmentManager(), fragments));
         //将tabLayout与viewpager连起来
@@ -363,6 +365,7 @@ public class FrgClkz extends BaseFrg {
         mTabLayout.getTabAt(0).setText(list_title.get(0));
         mTabLayout.getTabAt(1).setText(list_title.get(1));
         mTabLayout.getTabAt(2).setText(list_title.get(2));
+        mTabLayout.getTabAt(3).setText(list_title.get(3));
     }
 
     public static int go2Over(int current, int future, ImageView mImageView, int checked, int nochecked) {

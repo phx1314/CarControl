@@ -75,6 +75,9 @@ public class FrgZk extends BaseFrg {
     public Handler handler1 = new Handler();
     public Runnable runnable1;
     public String kt = "";
+    public ImageView mImageView10;
+    public TextView mTextView_10;
+    public LinearLayout mLinearLayout_10;
 
     @Override
     protected void create(Bundle savedInstanceState) {
@@ -204,6 +207,9 @@ public class FrgZk extends BaseFrg {
         imageView = (ImageView) findViewById(R.id.imageView);
         mImageView9 = (ImageView) findViewById(R.id.mImageView9);
         mTextView_ktwd = (TextView) findViewById(R.id.mTextView_ktwd);
+        mImageView10 = (ImageView) findViewById(R.id.mImageView10);
+        mTextView_10 = (TextView) findViewById(R.id.mTextView_10);
+        mLinearLayout_10 = (LinearLayout) findViewById(R.id.mLinearLayout_10);
 
         mLinearLayout_1.setOnClickListener(new View.OnClickListener() {
             @Override

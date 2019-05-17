@@ -297,6 +297,30 @@
                 android:gravity="center"
                 android:text="空调模式" />
         </LinearLayout>
+        <LinearLayout
+            android:id="@+id/mLinearLayout_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/j15dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/mImageView10"
+                android:layout_width="@dimen/j38dp"
+                android:layout_height="@dimen/j38dp"
+                android:background="@drawable/ic_control_seatheating_nor" />
+
+            <TextView
+                android:id="@+id/mTextView_10"
+                style="@style/text_style_13_white"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/j5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="座椅加热" />
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>
 

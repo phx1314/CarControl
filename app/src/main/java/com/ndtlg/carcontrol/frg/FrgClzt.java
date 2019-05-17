@@ -99,6 +99,8 @@ public class FrgClzt extends BaseFrg {
     public static String mc = "左前窗：关闭  右前窗：关闭\n左后窗：关闭  右后窗：关闭\n后备箱：关闭";
     public static String dg = "近光灯：关闭  远光灯：关闭\n示廓灯：关闭  双闪灯：关闭";
     public static String zk = "关闭\n解防";
+    public TextView mTextView_zczt;
+    public TextView mTextView_xdcdl;
 
     @Override
     protected void create(Bundle savedInstanceState) {
@@ -414,6 +416,8 @@ public class FrgClzt extends BaseFrg {
         mTextView_state24 = (TextView) findViewById(R.id.mTextView_state24);
         mTextView_state_lefts = (TextView) findViewById(R.id.mTextView_state_lefts);
         mTextView_state_rights = (TextView) findViewById(R.id.mTextView_state_rights);
+        mTextView_zczt = (TextView) findViewById(R.id.mTextView_zczt);
+        mTextView_xdcdl = (TextView) findViewById(R.id.mTextView_xdcdl);
         mImageView_gx.setOnClickListener(this);
         mImageView_gx_ty.setOnClickListener(this);
         mImageView_gx_state.setOnClickListener(this);
