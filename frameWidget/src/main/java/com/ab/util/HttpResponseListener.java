@@ -75,7 +75,7 @@ public class HttpResponseListener extends AbStringHttpResponseListener {
             MLog.D("请求服务器失败方法名：" + methodName);
             dismissProgressDialog();
             if (mHttpResponseListenerSon != null)
-                mHttpResponseListenerSon.onFailure(statusCode, content, error,methodName);
+                mHttpResponseListenerSon.onFailure(statusCode, content, error, methodName);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -91,7 +91,7 @@ public class HttpResponseListener extends AbStringHttpResponseListener {
                 Object json = new JSONTokener(content).nextValue();
                 if (json instanceof JSONObject) {
                     JSONObject mJSONObject = new JSONObject(content);
-                    if (mJSONObject.has("code") && !TextUtils.isEmpty(mJSONObject.getString("code")) && !mJSONObject.getString("code").equals("000000")) {
+                    if (mJSONObject.has("code") && !TextUtils.isEmpty(mJSONObject.getString("code")) && !mJSONObject.getString("code").equals("null") && !mJSONObject.getString("code").equals("000000")) {
                         Helper.toast(mJSONObject.getString("msg"), context);
                         if (mJSONObject.getString("code").equals("999902")) {
                             Frame.HANDLES.sentAll("FrgHome", 1, null);
@@ -109,6 +109,9 @@ public class HttpResponseListener extends AbStringHttpResponseListener {
             }
         } catch (Exception e) {
             e.printStackTrace();
+//            if (mHttpResponseListenerSon != null) {
+//                mHttpResponseListenerSon.onSuccess(methodName, content);
+//            }
         }
     }
 
