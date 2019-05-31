@@ -115,6 +115,12 @@ public class FrgKszd extends BaseFrg {
     }
 
     @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mHandler.removeCallbacks(mrun);
+    }
+
+    @Override
     public void setActionBar(ActionBar actionBar, Context context) {
         super.setActionBar(actionBar, context);
         mHeadlayout.setTitle("车辆诊断");

@@ -11,17 +11,16 @@
 
 package com.ndtlg.carcontrol.item;
 
-import com.ndtlg.carcontrol.R;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
-import android.view.ViewGroup;
-
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.ndtlg.carcontrol.R;
 
 
 
@@ -39,7 +38,6 @@ public class Jsxw extends BaseItem{
     public TextView mTextView_fenZ1;
     public TextView mTextView_csh1;
     public TextView mTextView_csh2;
-    public TextView mTextView_csh3;
 
 
 	@SuppressLint("InflateParams")
@@ -75,7 +73,6 @@ public class Jsxw extends BaseItem{
         mTextView_fenZ1=(TextView)contentview.findViewById(R.id.mTextView_fenZ1);
         mTextView_csh1=(TextView)contentview.findViewById(R.id.mTextView_csh1);
         mTextView_csh2=(TextView)contentview.findViewById(R.id.mTextView_csh2);
-        mTextView_csh3=(TextView)contentview.findViewById(R.id.mTextView_csh3);
 
 
     }

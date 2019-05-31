@@ -196,14 +196,17 @@
                         android:textColor="@color/gray"
                         android:textSize="14sp" />
                 </LinearLayout>
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_weight="1"
-    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"     android:layout_marginRight="@dimen/j30dp"
+                    android:layout_marginRight="@dimen/j30dp"
+                    android:gravity="center_horizontal"
                     android:orientation="vertical">
 
                     <TextView
@@ -986,6 +989,53 @@
                     android:gravity="center_vertical"
                     android:text="空调模式：对上" />
 
+                <TextView
+                    android:id="@+id/mTextView_state25"
+                    style="@style/text_style_13_white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:drawableLeft="@drawable/ic_home_seatheating_nor"
+                    android:gravity="center_vertical"
+                    android:text="座椅加热：关闭" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/text_style_13_gray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/j10dp"
+                android:layout_marginTop="@dimen/j10dp"
+                android:text="其他状态"
+                android:textColor="@color/A" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/j5dp"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/j10dp"
+                android:paddingRight="@dimen/j10dp">
+
+                <TextView
+                    android:id="@+id/mTextView_state26"
+                    style="@style/text_style_13_white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/ic_home_nocharge_nor"
+                    android:gravity="center_vertical"
+                    android:text="禁止充电：关闭" />
+
+                <TextView
+                    android:id="@+id/mTextView_state27"
+                    style="@style/text_style_13_white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:drawableLeft="@drawable/ic_home_nohigh_nor"
+                    android:gravity="center_vertical"
+                    android:text="禁止高压：关闭" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

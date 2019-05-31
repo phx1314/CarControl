@@ -31,7 +31,10 @@ import android.widget.ProgressBar;
 
 import com.ab.util.AbViewUtil;
 import com.ab.view.listener.AbOnListViewListener;
+import com.google.gson.Gson;
 import com.mdx.framework.adapter.MAdapter;
+
+import static com.framewidget.F.readClassAttr;
 
 // TODO: Auto-generated Javadoc
 
@@ -142,13 +145,14 @@ public class AbPullListView extends BaseListView implements OnScrollListener {
     private String method;
     private String type = "POST";
     private Object[] mparams;
-    public int PageSize = 10;
+    public int PageSize = 5;
     public int PageIndex = 1;
     public int pageIndex = 1;
     public String PageIndex_key = "page";
     public String PageSize_key = "rows";
     public Handler mHandler = new Handler();
     public Runnable runnable;
+    public BeanListBase mBeanListBase;
 
     /**
      * 构造.
@@ -427,17 +431,21 @@ public class AbPullListView extends BaseListView implements OnScrollListener {
         return super.onTouchEvent(ev);
     }
 
+    public void setJsonApiLoadParams(String method, BeanListBase mBeanListBase) {
+        this.method = method;
+        this.type = "JSON";
+        this.mBeanListBase = mBeanListBase;
+        pullLoad();
+    }
+
     public void loadData(boolean isRefreash) {
-        if (type.equalsIgnoreCase("POST")) {
-            loadUrlPost(method, isRefreash, PageSize_key, PageSize + "", PageIndex_key, PageIndex + "", mparams);
-        } else {
-            loadUrlGet(method, isRefreash, PageSize_key, PageSize + "", PageIndex_key, PageIndex + "", mparams);
-        }
+        mBeanListBase.sign = readClassAttr(mBeanListBase);
+        loadJsonUrl(method, isRefreash, new Gson().toJson(mBeanListBase));
     }
 
     public void reLoad() {
         setPullLoadEnable(true);
-        PageIndex = this.pageIndex;
+        mBeanListBase.page = PageIndex = this.pageIndex;
         loadData(true);
     }
 
@@ -471,6 +479,7 @@ public class AbPullListView extends BaseListView implements OnScrollListener {
     public void onSuccess(String methodName, String content, boolean isreFreash) {
         stopAll();
         PageIndex++;
+        mBeanListBase.page = PageIndex;
         MAdapter mMAdapter = mListViewListener.onSuccess(methodName, content);
         if (mMAdapter.getCount() < PageSize) {
             setPullLoadEnable(false);

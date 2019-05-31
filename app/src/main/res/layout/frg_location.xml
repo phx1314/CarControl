@@ -161,7 +161,7 @@
                 <ImageView
                     android:layout_width="1dip"
                     android:layout_height="@dimen/j20dp"
-                    android:background="@color/A" />
+                    android:background="#292929" />
 
                 <LinearLayout
                     android:layout_width="0dp"

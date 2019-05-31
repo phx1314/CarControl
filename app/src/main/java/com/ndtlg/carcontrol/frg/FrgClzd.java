@@ -16,9 +16,15 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.framewidget.F;
 import com.mdx.framework.activity.TitleAct;
 import com.mdx.framework.utility.Helper;
 import com.ndtlg.carcontrol.R;
+import com.ndtlg.carcontrol.bean.BeanqueryDiagInfo;
+import com.ndtlg.carcontrol.model.ModelqueryDiagInfo;
+
+import static com.ndtlg.carcontrol.F.json2Model;
+import static com.ndtlg.carcontrol.F.queryDiagInfo;
 
 
 public class FrgClzd extends BaseFrg {
@@ -33,9 +39,12 @@ public class FrgClzd extends BaseFrg {
     public TextView mTextView_fen2;
     public TextView mTextView_csh1;
     public TextView mTextView_csh2;
-    public TextView mTextView_csh3;
     public TextView mTextView_fenZ1;
     public TextView mTextView_fenZ2;
+    public TextView mTextView_sc;
+    public TextView mTextView_zdsc;
+    public TextView mTextView_soc;
+    public TextView mTextView_soczd;
 
 
     @Override
@@ -60,10 +69,13 @@ public class FrgClzd extends BaseFrg {
         mTextView_fen2 = (TextView) findViewById(R.id.mTextView_fen2);
         mTextView_csh1 = (TextView) findViewById(R.id.mTextView_csh1);
         mTextView_csh2 = (TextView) findViewById(R.id.mTextView_csh2);
-        mTextView_csh3 = (TextView) findViewById(R.id.mTextView_csh3);
         mHeadlayout = (com.framewidget.view.Headlayout) findViewById(R.id.mHeadlayout);
         mTextView_fenZ1 = (TextView) findViewById(R.id.mTextView_fenZ1);
         mTextView_fenZ2 = (TextView) findViewById(R.id.mTextView_fenZ2);
+        mTextView_sc = (TextView) findViewById(R.id.mTextView_sc);
+        mTextView_zdsc = (TextView) findViewById(R.id.mTextView_zdsc);
+        mTextView_soc = (TextView) findViewById(R.id.mTextView_soc);
+        mTextView_soczd = (TextView) findViewById(R.id.mTextView_soczd);
 
         mLinearLayout1.setOnClickListener(Helper.delayClickLitener(new View.OnClickListener() {
             @Override
@@ -95,7 +107,19 @@ public class FrgClzd extends BaseFrg {
                 Helper.startActivity(getContext(), FrgGrzx.class, TitleAct.class);
             }
         }));
+        loadJsonUrl(queryDiagInfo, new BeanqueryDiagInfo());
     }
 
-
+    @Override
+    public void onSuccess(String methodName, String content) {
+        if (methodName.equals(queryDiagInfo)) {
+            ModelqueryDiagInfo mModelqueryDiagInfo = (ModelqueryDiagInfo) json2Model(content, ModelqueryDiagInfo.class);
+            mTextView_sc.setText(F.go2Wei(mModelqueryDiagInfo.tripDiag.avgDriveTime) + "");
+            mTextView_zdsc.setText(mModelqueryDiagInfo.tripDiag.maxDriveTime + "");
+            mTextView_soc.setText(F.go2Wei(mModelqueryDiagInfo.tripDiag.avgChargeSoc) + "%");
+            mTextView_soczd.setText(mModelqueryDiagInfo.tripDiag.minChargeSoc + "%");
+            mTextView_csh1.setText(mModelqueryDiagInfo.totalDriveBehaviorCount.totalAccelerateCount + "");
+            mTextView_csh2.setText(mModelqueryDiagInfo.totalDriveBehaviorCount.totalDecelerateCount + "");
+        }
+    }
 }

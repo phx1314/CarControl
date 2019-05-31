@@ -37,7 +37,7 @@
                 android:layout_marginTop="@dimen/j5dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="禁止高压" />
+                android:text="禁止充电" />
         </LinearLayout>
 
 
@@ -120,7 +120,7 @@
                 android:layout_marginTop="@dimen/j5dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="远光灯" />
+                android:text="禁止高压" />
         </LinearLayout>
 
 

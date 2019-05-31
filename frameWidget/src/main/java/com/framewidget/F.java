@@ -16,6 +16,8 @@ import android.os.IBinder;
 import android.preference.PreferenceManager;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.FragmentActivity;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.Display;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -29,6 +31,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.ab.util.AbMd5;
 import com.framewidget.error.PopUpdataPhoto;
 import com.framewidget.view.CallBackOnly;
 import com.framewidget.view.CallBackPt;
@@ -60,10 +63,13 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.Field;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 import static com.ab.util.AbDateUtil.getDateByFormat;
@@ -91,7 +97,47 @@ public class F {
         // .getSystemService(Context.INPUT_METHOD_SERVICE);
         // imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
     }
-
+    /**
+     * 用来遍历对象属性和属性值
+     */
+    public static String readClassAttr(Object tb) {
+        HashMap map = new HashMap();
+        List<String> list = new ArrayList<>();
+        String str = "";
+        try {
+            Field[] fields = tb.getClass().getDeclaredFields();
+            System.out.println(fields.length);
+            for (Field field : fields) {
+                field.setAccessible(true);
+                if (!field.getName().equals("sign")) {
+                    map.put(field.getName(), TextUtils.isEmpty(field.get(tb).toString()) ? "" : field.get(tb).toString());
+                    if (!field.getName().equals("timestamp"))
+                        list.add(field.getName());
+                }
+            }
+            if (tb.getClass().getSuperclass() != null && (tb.getClass().getSuperclass().getSimpleName().equals("BeanBase") || tb.getClass().getSuperclass().getSimpleName().equals("BeanListBase"))) {
+                Field[] fields_father = tb.getClass().getSuperclass().getDeclaredFields();
+                for (Field field : fields_father) {
+                    field.setAccessible(true);
+                    if (!field.getName().equals("sign")) {
+                        map.put(field.getName(), TextUtils.isEmpty(field.get(tb).toString()) ? "" : field.get(tb).toString());
+                        if (!field.getName().equals("timestamp"))
+                            list.add(field.getName());
+                    }
+                }
+            }
+            Collections.sort(list, String.CASE_INSENSITIVE_ORDER);
+            for (String key : list) {
+                str += key + "=" + map.get(key) + "&";
+            }
+            str += "timestamp=" + map.get("timestamp");
+            Log.i("sign=", str);
+            return AbMd5.MD5(str);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "";
+    }
 
     /**
      * 描述：Date类型转化为String类型.
