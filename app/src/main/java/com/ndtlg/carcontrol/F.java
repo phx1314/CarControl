@@ -54,7 +54,7 @@ public class F {
     public static String queryAirConditionState = api2 + "/rest/cmd/queryAirConditionState";
     public static String luggage = api2 + "/rest/cmd/luggage";
     public static String queryDiagInfo =  "http://39.104.22.46:8030/appUser/queryDiagInfo";
-    public static String queryDiagInfoList =  "http://39.104.22.46:8030/appUser/queryDiagInfo";
+    public static String queryDiagInfoList =  "http://39.104.22.46:8030/appUser/queryUserTripList";
     public static ModelappLogin mModelappLogin;
 
 

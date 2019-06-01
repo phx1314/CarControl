@@ -20,29 +20,29 @@ import com.mdx.framework.adapter.MAdapter;
 import com.mdx.framework.utility.Helper;
 import com.ndtlg.carcontrol.frg.FrgJsxwDetail;
 import com.ndtlg.carcontrol.item.Jsxw;
+import com.ndtlg.carcontrol.model.ModelqueryDiagInfoList;
 
 import java.util.List;
 
-public class AdaJsxw extends MAdapter<String> {
+public class AdaJsxw extends MAdapter<ModelqueryDiagInfoList.TripListBean> {
 
-    public AdaJsxw(Context context, List<String> list) {
+    public AdaJsxw(Context context, List<ModelqueryDiagInfoList.TripListBean> list) {
         super(context, list);
     }
 
 
     @Override
     public View getview(int position, View convertView, ViewGroup parent) {
-        String item = get(position);
+        final ModelqueryDiagInfoList.TripListBean item = get(position);
         if (convertView == null) {
             convertView = Jsxw.getView(getContext(), parent);
-            ;
         }
         Jsxw mJsxw = (Jsxw) convertView.getTag();
-        mJsxw.set(item);
+        mJsxw.set(item,this);
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Helper.startActivity(getContext(), FrgJsxwDetail.class, TitleAct.class);
+                Helper.startActivity(getContext(), FrgJsxwDetail.class, TitleAct.class,"start_time",item.startTime,"end_time",item.endTime);
             }
         });
         return convertView;

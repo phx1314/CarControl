@@ -10,9 +10,11 @@ import com.ndtlg.carcontrol.F;
 public class BeanqueryDiagInfoList extends BeanListBase {
     public String startTime = "";
     public String endTime = "";
-    public String vin;
+    public String vin= F.mModelappLogin.userInfo.vin;
 
-    public BeanqueryDiagInfoList() {
-        this.vin = F.mModelappLogin.userInfo.vin;
+    public BeanqueryDiagInfoList(String startTime,String endTime) {
+//        this.vin = "07B8101790228760";
+        this.startTime = startTime+" 00:00:00";
+        this.endTime = endTime+" 00:00:00";
     }
 }

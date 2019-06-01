@@ -271,11 +271,11 @@ public class FrgLocation extends BaseFrg {
             mBaiduMap.setMyLocationData(locData);
             if (isFirstLoc) {
                 isFirstLoc = false;
-//                LatLng ll = new LatLng(location.getLatitude(),
-//                        location.getLongitude());
-//                MapStatus.Builder builder = new MapStatus.Builder();
-//                builder.target(ll).zoom(18.0f);
-//                mBaiduMap.animateMapStatus(MapStatusUpdateFactory.newMapStatus(builder.build()));
+                LatLng ll = new LatLng(mCurrentLat,
+                        mCurrentLon);
+                MapStatus.Builder builder = new MapStatus.Builder();
+                builder.target(ll).zoom(18.0f);
+                mBaiduMap.animateMapStatus(MapStatusUpdateFactory.newMapStatus(builder.build()));
             }
         }
 

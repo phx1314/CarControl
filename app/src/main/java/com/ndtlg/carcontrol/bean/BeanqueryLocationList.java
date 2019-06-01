@@ -10,6 +10,7 @@ import static com.ndtlg.carcontrol.F.readClassAttr;
 
 public class BeanqueryLocationList extends BeanBase {
     public String vin = F.mModelappLogin.userInfo.vin;
+//    public String vin =     "07B8101790228760";
     public String startTime;
     public String endTime;
 

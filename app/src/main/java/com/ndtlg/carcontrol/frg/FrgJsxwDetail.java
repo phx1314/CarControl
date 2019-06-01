@@ -63,9 +63,13 @@ public class FrgJsxwDetail extends BaseFrg {
     public LocationClient mLocClient;
     public MyLocationListenner myListener = new MyLocationListenner();
     boolean isFirstLoc = true; // 是否首次定位
+    public String start_time;
+    public String end_time;
 
     @Override
     protected void create(Bundle savedInstanceState) {
+        start_time = getActivity().getIntent().getStringExtra("start_time");
+        end_time = getActivity().getIntent().getStringExtra("end_time");
         setContentView(R.layout.frg_jsxw_detail);
         initView();
         loaddata();
@@ -114,7 +118,8 @@ public class FrgJsxwDetail extends BaseFrg {
         mMapView.showScaleControl(false);
         mMapView.showZoomControls(false);
 
-        loadJsonUrl(queryLocationList, new BeanqueryLocationList("2019-05-17 00:00:00", "2019-05-17 10:03:27"));
+//        loadJsonUrl(queryLocationList, new BeanqueryLocationList("2019-05-17 00:00:00", "2019-05-17 10:03:27"));
+        loadJsonUrl(queryLocationList, new BeanqueryLocationList(start_time, end_time));
     }
 
     /**
@@ -192,6 +197,6 @@ public class FrgJsxwDetail extends BaseFrg {
     @Override
     public void setActionBar(ActionBar actionBar, Context context) {
         super.setActionBar(actionBar, context);
-        mHeadlayout.setTitle("2019-05-17");
+        mHeadlayout.setTitle("详情");
     }
 }
