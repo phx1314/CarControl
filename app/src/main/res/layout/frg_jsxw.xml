@@ -9,9 +9,11 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/j48dp"
+        android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:padding="@dimen/j10dp">
+        android:padding="@dimen/j10dp"
+ >
 
         <TextView
             style="@style/text_style_13_gray"
@@ -23,7 +25,7 @@
             android:id="@+id/mTextView_x1"
             style="@style/text_style_11_white"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginLeft="@dimen/j8dp"
             android:layout_weight="1"
             android:background="@drawable/shape_gray_bk"
@@ -48,7 +50,7 @@
             android:id="@+id/mTextView_x2"
             style="@style/text_style_11_white"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginLeft="@dimen/j8dp"
             android:layout_weight="1"
             android:background="@drawable/shape_gray_bk"
@@ -66,7 +68,7 @@
             android:id="@+id/mImageView_dl"
             style="@style/text_style_13_white"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginLeft="@dimen/j8dp"
             android:background="@drawable/shape_login"
             android:gravity="center"

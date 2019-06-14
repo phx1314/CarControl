@@ -18,6 +18,7 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -26,6 +27,9 @@ import com.mdx.framework.Frame;
 import com.mdx.framework.utility.Helper;
 import com.ndtlg.carcontrol.F;
 import com.ndtlg.carcontrol.R;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 
 public class AqyzDialog extends BaseItem {
@@ -57,7 +61,6 @@ public class AqyzDialog extends BaseItem {
         mImageView_dl = (TextView) contentview.findViewById(R.id.mImageView_dl);
         mEditText = (EditText) findViewById(R.id.mEditText);
         mImageView_close = (ImageView) findViewById(R.id.mImageView_close);
-
         mImageView_dl.setOnClickListener(Helper.delayClickLitener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -80,10 +83,32 @@ public class AqyzDialog extends BaseItem {
 
             }
         }));
+
+    }
+
+    public void showKeyboard() {
+        if (mEditText != null) {
+            mEditText.setFocusable(true);
+            mEditText.setFocusableInTouchMode(true);
+            //请求获得焦点
+            mEditText.requestFocus();
+            //调用系统输入法
+            InputMethodManager inputManager = (InputMethodManager) mEditText
+                    .getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+            inputManager.showSoftInput(mEditText, 0);
+        }
     }
 
     public void set(Dialog item) {
-        this.item = item;
+        this.item = item;//设置可获得焦点
+        Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+
+            @Override
+            public void run() {
+                showKeyboard();
+            }
+        }, 300);
     }
 
 

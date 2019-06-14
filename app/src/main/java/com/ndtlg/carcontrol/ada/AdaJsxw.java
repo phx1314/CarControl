@@ -42,7 +42,7 @@ public class AdaJsxw extends MAdapter<ModelqueryDiagInfoList.TripListBean> {
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Helper.startActivity(getContext(), FrgJsxwDetail.class, TitleAct.class,"start_time",item.startTime,"end_time",item.endTime);
+                Helper.startActivity(getContext(), FrgJsxwDetail.class, TitleAct.class,"item",item );
             }
         });
         return convertView;

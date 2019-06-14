@@ -17,6 +17,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.androidkun.xtablayout.XTabLayout;
+import com.framewidget.F;
 import com.framewidget.view.Headlayout;
 import com.mdx.framework.Frame;
 import com.mdx.framework.activity.TitleAct;
@@ -76,6 +77,7 @@ public class FrgClkz extends BaseFrg {
         switch (type) {
             case 0:
                 doDataNew(mModelCz);
+                F.closeSoftKey(getActivity());
                 break;
 //            case 1:
 //                doResult((ModelKg) obj);

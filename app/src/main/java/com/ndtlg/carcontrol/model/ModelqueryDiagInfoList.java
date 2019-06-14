@@ -20,7 +20,7 @@ public class ModelqueryDiagInfoList implements Serializable {
     public int totalCount;
     public List<TripListBean> tripList;
 
-    public static class TripListBean {
+    public static class TripListBean implements Serializable{
         /**
          * id : 4
          * vin : 07B8101790228760
@@ -51,7 +51,7 @@ public class ModelqueryDiagInfoList implements Serializable {
         public int totalAccelerateCount;
         public int totalDecelerateCount;
 
-        public static class StartLocationBean {
+        public static class StartLocationBean implements Serializable{
             /**
              * uid : 21772623
              * vin : 07B8101790228760
@@ -72,7 +72,7 @@ public class ModelqueryDiagInfoList implements Serializable {
             public Object createTime;
         }
 
-        public static class EndLocationBean {
+        public static class EndLocationBean implements Serializable{
             /**
              * uid : 21774062
              * vin : 07B8101790228760

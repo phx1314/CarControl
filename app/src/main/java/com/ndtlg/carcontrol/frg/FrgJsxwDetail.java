@@ -39,6 +39,7 @@ import com.baidu.mapapi.utils.CoordinateConverter;
 import com.mdx.framework.widget.ActionBar;
 import com.ndtlg.carcontrol.R;
 import com.ndtlg.carcontrol.bean.BeanqueryLocationList;
+import com.ndtlg.carcontrol.model.ModelqueryDiagInfoList;
 import com.ndtlg.carcontrol.model.ModelqueryLocationList;
 
 import java.util.ArrayList;
@@ -57,19 +58,15 @@ public class FrgJsxwDetail extends BaseFrg {
     public TextView mTextView_fenZ1;
     public TextView mTextView_csh1;
     public TextView mTextView_csh2;
-    public TextView mTextView_csh3;
     public MapView mMapView;
     private BaiduMap mBaiduMap;
     public LocationClient mLocClient;
     public MyLocationListenner myListener = new MyLocationListenner();
     boolean isFirstLoc = true; // 是否首次定位
-    public String start_time;
-    public String end_time;
-
+    public ModelqueryDiagInfoList.TripListBean item;
     @Override
     protected void create(Bundle savedInstanceState) {
-        start_time = getActivity().getIntent().getStringExtra("start_time");
-        end_time = getActivity().getIntent().getStringExtra("end_time");
+        item= (ModelqueryDiagInfoList.TripListBean) getActivity().getIntent().getSerializableExtra("item");
         setContentView(R.layout.frg_jsxw_detail);
         initView();
         loaddata();
@@ -87,10 +84,13 @@ public class FrgJsxwDetail extends BaseFrg {
         mTextView_fenZ1 = (TextView) findViewById(R.id.mTextView_fenZ1);
         mTextView_csh1 = (TextView) findViewById(R.id.mTextView_csh1);
         mTextView_csh2 = (TextView) findViewById(R.id.mTextView_csh2);
-        mTextView_csh3 = (TextView) findViewById(R.id.mTextView_csh3);
         mMapView = (MapView) findViewById(R.id.mMapView);
 
-
+        mTextView_xssj.setText(item.driveTime + "");
+        mTextView_xslc.setText(item.driveMileage + "");
+        mTextView_sd.setText(item.socUse + "");
+        mTextView_csh1.setText(item.totalAccelerateCount + "");
+        mTextView_csh2.setText(item.totalDecelerateCount + "");
     }
 
     public void loaddata() {
@@ -119,7 +119,7 @@ public class FrgJsxwDetail extends BaseFrg {
         mMapView.showZoomControls(false);
 
 //        loadJsonUrl(queryLocationList, new BeanqueryLocationList("2019-05-17 00:00:00", "2019-05-17 10:03:27"));
-        loadJsonUrl(queryLocationList, new BeanqueryLocationList(start_time, end_time));
+        loadJsonUrl(queryLocationList, new BeanqueryLocationList(item.startTime, item.endTime));
     }
 
     /**

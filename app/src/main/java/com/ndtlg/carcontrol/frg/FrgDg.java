@@ -96,6 +96,7 @@ public class FrgDg extends BaseFrg {
             @Override
             public void onClick(View view) {
                 mModelCz.lowLamp = go2Over(modelqueryState.content.lowLamp, mModelCz.lowLamp, mImageView1, R.drawable.ic_control_nearlight_selected, R.drawable.ic_control_nearlight_nor);
+                mModelCz.highLamp = go2Over(modelqueryState.content.highLamp, 1, mImageView3, R.drawable.ic_control_highlight_selected_y, R.drawable.ic_control_highlight_nor_y);
             }
         });
         mLinearLayout_2.setOnClickListener(new View.OnClickListener() {
@@ -108,6 +109,7 @@ public class FrgDg extends BaseFrg {
             @Override
             public void onClick(View view) {
                 mModelCz.highLamp = go2Over(modelqueryState.content.highLamp, mModelCz.highLamp, mImageView3, R.drawable.ic_control_highlight_selected_y, R.drawable.ic_control_highlight_nor_y);
+                mModelCz.lowLamp = go2Over(modelqueryState.content.lowLamp, 1, mImageView1, R.drawable.ic_control_nearlight_selected, R.drawable.ic_control_nearlight_nor);
             }
         });
         mLinearLayout_4.setOnClickListener(new View.OnClickListener() {
@@ -124,6 +126,7 @@ public class FrgDg extends BaseFrg {
                     @Override
                     public void goReturnDo(Dialog mDialog) {
                         ((AqyzDialog) view1.getTag()).set(mDialog);
+
                     }
                 });
             }

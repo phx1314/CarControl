@@ -20,6 +20,7 @@ import android.widget.TextView;
 
 import com.ab.view.listener.AbOnListViewListener;
 import com.ab.view.pullview.AbPullListView;
+import com.framewidget.F;
 import com.framewidget.newMenu.DateDfSelectDialog;
 import com.mdx.framework.adapter.MAdapter;
 import com.mdx.framework.widget.ActionBar;
@@ -32,6 +33,7 @@ import com.ndtlg.carcontrol.bean.BeanqueryDiagInfoList_s;
 import com.ndtlg.carcontrol.model.ModelqueryDiagInfoList;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 import static com.ndtlg.carcontrol.F.json2Model;
 import static com.ndtlg.carcontrol.F.queryDiagInfoList;
@@ -81,13 +83,51 @@ public class FrgJsxw extends BaseFrg {
         mDateSelectDialog1.setOnSelected(new DateDfSelectDialog.OnSelected() {
             @Override
             public void onSelected(Dialog dia, String selected) {
-                mTextView_x1.setText(selected);
+                if (!TextUtils.isEmpty(mTextView_x2.getText().toString())) {
+                    if (F.isDateBefore(selected, mTextView_x2.getText().toString(), "yyyy-MM-dd")) {
+                        mTextView_x1.setText(selected);
+                    } else {
+                        mTextView_x1.setText(mTextView_x2.getText().toString());
+                    }
+                } else {
+                    if (F.isDateBefore(selected, F.getStringByFormat(new Date(
+                            System.currentTimeMillis()), "yyyy-MM-dd"), "yyyy-MM-dd")) {
+                        mTextView_x1.setText(selected);
+                    } else {
+                        mTextView_x1.setText(F.getStringByFormat(
+                                new Date(System.currentTimeMillis()), "yyyy-MM-dd"));
+                    }
+                }
+
+
+
             }
         });
         mDateSelectDialog2.setOnSelected(new DateDfSelectDialog.OnSelected() {
             @Override
             public void onSelected(Dialog dia, String selected) {
-                mTextView_x2.setText(selected);
+                if (!TextUtils.isEmpty(mTextView_x1.getText().toString())) {
+                    if (F.isDateBefore(selected, mTextView_x1.getText().toString(), "yyyy-MM-dd")) {
+                        mTextView_x2.setText(mTextView_x1.getText().toString());
+                    } else {
+                        if (F.isDateBefore(selected, F.getStringByFormat(new Date(
+                                System.currentTimeMillis()), "yyyy-MM-dd"), "yyyy-MM-dd")) {
+                            mTextView_x2.setText(selected);
+                        } else {
+                            mTextView_x2.setText(F.getStringByFormat(
+                                    new Date(System.currentTimeMillis()), "yyyy-MM-dd"));
+                        }
+                    }
+                } else {
+                    if (F.isDateBefore(selected, F.getStringByFormat(new Date(
+                            System.currentTimeMillis()), "yyyy-MM-dd"), "yyyy-MM-dd")) {
+                        mTextView_x2.setText(selected);
+                    } else {
+                        mTextView_x2.setText(F.getStringByFormat(
+                                new Date(System.currentTimeMillis()), "yyyy-MM-dd"));
+                    }
+                }
+
             }
         });
         mImageView_dl.setOnClickListener(new View.OnClickListener() {
