@@ -389,6 +389,25 @@ public class FrgClkz extends BaseFrg {
         }
         return end;
     }
+    public static int go2OverDG(int current, int future, ImageView mImageView, int checked, int nochecked) {
+        int end;
+        if (future == -1) {
+            end = current == 0 ? 0 : 1;
+            if (end == 0) {
+                mImageView.setBackgroundResource(checked);
+            } else {
+                mImageView.setBackgroundResource(nochecked);
+            }
+        } else {
+            end = -1;
+            if (current == 0) {
+                mImageView.setBackgroundResource(nochecked);
+            } else {
+                mImageView.setBackgroundResource(checked);
+            }
+        }
+        return end;
+    }
 
     public static int go2OverSpecial(int current, int future, ImageView mImageView, int checked, int nochecked, ImageView mImageView2, int checked2, int nochecked2) {
         int end;

@@ -180,7 +180,7 @@ public class FrgHome extends BaseFrg implements OnCheckChange {
                 try {
                     if (!TextUtils.isEmpty(mModelappLogin.userInfo.vin) && isAppOnForeground()) {
 //                        Helper.toast("前台", getContext());
-                        loadJsonUrlNoshow(queryState, "queryState2", new BeanVin(F.mModelappLogin.userInfo.vin));
+                        loadJsonUrlNoshow(queryState, queryState, new BeanVin(F.mModelappLogin.userInfo.vin));
                     } else {
 //                        Helper.toast("后台", getContext());
                     }

@@ -114,12 +114,12 @@ public class FrgClzd extends BaseFrg {
     public void onSuccess(String methodName, String content) {
         if (methodName.equals(queryDiagInfo)) {
             ModelqueryDiagInfo mModelqueryDiagInfo = (ModelqueryDiagInfo) json2Model(content, ModelqueryDiagInfo.class);
-            mTextView_sc.setText(F.go2Wei(mModelqueryDiagInfo.tripDiag.avgDriveTime) + "");
             mTextView_zdsc.setText(mModelqueryDiagInfo.tripDiag.maxDriveTime + "");
             mTextView_soc.setText(F.go2Wei(mModelqueryDiagInfo.tripDiag.avgChargeSoc) + "%");
             mTextView_soczd.setText(mModelqueryDiagInfo.tripDiag.minChargeSoc + "%");
             mTextView_csh1.setText(mModelqueryDiagInfo.totalDriveBehaviorCount.totalAccelerateCount + "");
             mTextView_csh2.setText(mModelqueryDiagInfo.totalDriveBehaviorCount.totalDecelerateCount + "");
+            mTextView_sc.setText(F.go2Wei(mModelqueryDiagInfo.tripDiag.avgDriveTime) + "");
         }
     }
 }

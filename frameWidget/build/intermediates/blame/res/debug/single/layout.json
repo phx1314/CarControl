@@ -84,12 +84,12 @@
         "source": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\layout\\abc_screen_content_include.xml"
     },
     {
-        "merged": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
-        "source": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\layout\\notification_template_big_media.xml"
-    },
-    {
         "merged": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\debug\\layout\\frg_pub_edt.xml",
         "source": "F:\\AsWork\\CarControl\\frameWidget\\src\\main\\res\\layout\\frg_pub_edt.xml"
+    },
+    {
+        "merged": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
+        "source": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\layout\\notification_template_big_media.xml"
     },
     {
         "merged": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\debug\\layout\\default_act_no_title.xml",
@@ -124,12 +124,12 @@
         "source": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\layout\\abc_popup_menu_header_item_layout.xml"
     },
     {
-        "merged": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\debug\\layout\\baner_viewpager_cirle.xml",
-        "source": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\CarControl\\andframework-release\\unspecified\\res\\layout\\baner_viewpager_cirle.xml"
-    },
-    {
         "merged": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\debug\\layout\\item_xz.xml",
         "source": "F:\\AsWork\\CarControl\\frameWidget\\src\\main\\res\\layout\\item_xz.xml"
+    },
+    {
+        "merged": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\debug\\layout\\baner_viewpager_cirle.xml",
+        "source": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\CarControl\\andframework-release\\unspecified\\res\\layout\\baner_viewpager_cirle.xml"
     },
     {
         "merged": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",
@@ -164,12 +164,12 @@
         "source": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.1.1\\res\\layout\\design_navigation_item.xml"
     },
     {
-        "merged": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\debug\\layout\\item_radio.xml",
-        "source": "F:\\work\\CarControl\\frameWidget\\src\\main\\res\\layout\\item_radio.xml"
-    },
-    {
         "merged": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\debug\\layout\\default_act_transstatus_title.xml",
         "source": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\CarControl\\andframework-release\\unspecified\\res\\layout\\default_act_transstatus_title.xml"
+    },
+    {
+        "merged": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\debug\\layout\\item_radio.xml",
+        "source": "F:\\work\\CarControl\\frameWidget\\src\\main\\res\\layout\\item_radio.xml"
     },
     {
         "merged": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
@@ -188,12 +188,12 @@
         "source": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\CarControl\\andframework-release\\unspecified\\res\\layout\\default_item_image_sel.xml"
     },
     {
-        "merged": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\debug\\layout\\photoshow_dia.xml",
-        "source": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\CarControl\\andframework-release\\unspecified\\res\\layout\\photoshow_dia.xml"
-    },
-    {
         "merged": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
         "source": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\layout\\abc_screen_simple.xml"
+    },
+    {
+        "merged": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\debug\\layout\\photoshow_dia.xml",
+        "source": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\CarControl\\andframework-release\\unspecified\\res\\layout\\photoshow_dia.xml"
     },
     {
         "merged": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\debug\\layout\\floatlabel_base.xml",
@@ -228,16 +228,16 @@
         "source": "F:\\work\\CarControl\\frameWidget\\src\\main\\res\\layout\\slidingmenumain.xml"
     },
     {
-        "merged": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
-        "source": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\layout\\notification_template_part_chronometer.xml"
+        "merged": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
+        "source": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\layout\\abc_action_bar_title_item.xml"
     },
     {
         "merged": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
         "source": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\layout\\abc_action_menu_layout.xml"
     },
     {
-        "merged": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
-        "source": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\layout\\abc_action_bar_title_item.xml"
+        "merged": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
+        "source": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\layout\\notification_template_part_chronometer.xml"
     },
     {
         "merged": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\debug\\layout\\default_mutiple_photo_select.xml",

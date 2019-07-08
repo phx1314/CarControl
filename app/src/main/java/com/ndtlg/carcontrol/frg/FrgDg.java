@@ -25,6 +25,7 @@ import com.ndtlg.carcontrol.item.AqyzDialog;
 
 import static com.ndtlg.carcontrol.frg.FrgClkz.changeStateImage;
 import static com.ndtlg.carcontrol.frg.FrgClkz.go2Over;
+import static com.ndtlg.carcontrol.frg.FrgClkz.go2OverDG;
 import static com.ndtlg.carcontrol.frg.FrgClzt.dg;
 import static com.ndtlg.carcontrol.frg.FrgHome.mModelCz;
 import static com.ndtlg.carcontrol.frg.FrgHome.modelqueryState;
@@ -62,10 +63,14 @@ public class FrgDg extends BaseFrg {
                 mTextView_state.setText(dg);
                 break;
             case 120:
-                changeStateImage(modelqueryState.content.lowLamp, mImageView1, R.drawable.ic_control_nearlight_selected, R.drawable.ic_control_nearlight_nor);
-                changeStateImage(modelqueryState.content.placeLamp, mImageView2, R.drawable.ic_control_shownlight_selected, R.drawable.ic_control_shownlight_nor);
-                changeStateImage(modelqueryState.content.highLamp, mImageView3, R.drawable.ic_control_highlight_selected_y, R.drawable.ic_control_highlight_nor_y);
-                changeStateImage(modelqueryState.content.flashLamp, mImageView4, R.drawable.ic_control_doubleflash_selected, R.drawable.ic_control_doubleflash_nor);
+                if (mModelCz.lowLamp == -1)
+                    changeStateImage(modelqueryState.content.lowLamp, mImageView1, R.drawable.ic_control_nearlight_selected, R.drawable.ic_control_nearlight_nor);
+                if (mModelCz.placeLamp == -1)
+                    changeStateImage(modelqueryState.content.placeLamp, mImageView2, R.drawable.ic_control_shownlight_selected, R.drawable.ic_control_shownlight_nor);
+                if (mModelCz.highLamp == -1)
+                    changeStateImage(modelqueryState.content.highLamp, mImageView3, R.drawable.ic_control_highlight_selected_y, R.drawable.ic_control_highlight_nor_y);
+                if (mModelCz.flashLamp == -1)
+                    changeStateImage(modelqueryState.content.flashLamp, mImageView4, R.drawable.ic_control_doubleflash_selected, R.drawable.ic_control_doubleflash_nor);
                 break;
         }
     }
@@ -95,8 +100,16 @@ public class FrgDg extends BaseFrg {
         mLinearLayout_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mModelCz.lowLamp = go2Over(modelqueryState.content.lowLamp, mModelCz.lowLamp, mImageView1, R.drawable.ic_control_nearlight_selected, R.drawable.ic_control_nearlight_nor);
-                mModelCz.highLamp = go2Over(modelqueryState.content.highLamp, 1, mImageView3, R.drawable.ic_control_highlight_selected_y, R.drawable.ic_control_highlight_nor_y);
+                mModelCz.lowLamp = go2OverDG(modelqueryState.content.lowLamp, mModelCz.lowLamp, mImageView1, R.drawable.ic_control_nearlight_selected, R.drawable.ic_control_nearlight_nor);
+                if (mModelCz.lowLamp == 0 || (mModelCz.lowLamp == -1 && modelqueryState.content.lowLamp == 1))
+                    if (modelqueryState.content.highLamp == 1 && mModelCz.highLamp == -1) {
+                        mModelCz.highLamp = go2OverDG(modelqueryState.content.highLamp, mModelCz.highLamp, mImageView3, R.drawable.ic_control_highlight_selected_y, R.drawable.ic_control_highlight_nor_y);
+                    } else if (mModelCz.highLamp == 0 && modelqueryState.content.highLamp == 1) {
+                        mModelCz.highLamp = -1;
+                        mModelCz.highLamp = go2OverDG(modelqueryState.content.highLamp, mModelCz.highLamp, mImageView3, R.drawable.ic_control_highlight_selected_y, R.drawable.ic_control_highlight_nor_y);
+                    } else if (mModelCz.highLamp == 0 && modelqueryState.content.highLamp == 0) {
+                        mModelCz.highLamp = go2OverDG(modelqueryState.content.highLamp, mModelCz.highLamp, mImageView3, R.drawable.ic_control_highlight_selected_y, R.drawable.ic_control_highlight_nor_y);
+                    }
             }
         });
         mLinearLayout_2.setOnClickListener(new View.OnClickListener() {
@@ -108,8 +121,16 @@ public class FrgDg extends BaseFrg {
         mLinearLayout_3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mModelCz.highLamp = go2Over(modelqueryState.content.highLamp, mModelCz.highLamp, mImageView3, R.drawable.ic_control_highlight_selected_y, R.drawable.ic_control_highlight_nor_y);
-                mModelCz.lowLamp = go2Over(modelqueryState.content.lowLamp, 1, mImageView1, R.drawable.ic_control_nearlight_selected, R.drawable.ic_control_nearlight_nor);
+                mModelCz.highLamp = go2OverDG(modelqueryState.content.highLamp, mModelCz.highLamp, mImageView3, R.drawable.ic_control_highlight_selected_y, R.drawable.ic_control_highlight_nor_y);
+                if (mModelCz.highLamp == 0 || (mModelCz.highLamp == -1 && modelqueryState.content.highLamp == 1))
+                    if (modelqueryState.content.lowLamp == 1 && mModelCz.lowLamp == -1) {
+                        mModelCz.lowLamp = go2OverDG(modelqueryState.content.lowLamp, mModelCz.lowLamp, mImageView1, R.drawable.ic_control_nearlight_selected, R.drawable.ic_control_nearlight_nor);
+                    } else if (mModelCz.lowLamp == 0 && modelqueryState.content.lowLamp == 1) {
+                        mModelCz.lowLamp = -1;
+                        mModelCz.lowLamp = go2OverDG(modelqueryState.content.lowLamp, mModelCz.lowLamp, mImageView1, R.drawable.ic_control_nearlight_selected, R.drawable.ic_control_nearlight_nor);
+                    } else if (mModelCz.lowLamp == 0 && modelqueryState.content.lowLamp == 0) {
+                        mModelCz.lowLamp = go2OverDG(modelqueryState.content.lowLamp, mModelCz.lowLamp, mImageView1, R.drawable.ic_control_nearlight_selected, R.drawable.ic_control_nearlight_nor);
+                    }
             }
         });
         mLinearLayout_4.setOnClickListener(new View.OnClickListener() {

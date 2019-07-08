@@ -8,12 +8,12 @@
         "source": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\CarControl\\andframework-release\\unspecified\\res\\drawable\\default_photo_sel.xml"
     },
     {
-        "merged": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_ab_back_material.xml",
-        "source": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\drawable\\abc_ic_ab_back_material.xml"
-    },
-    {
         "merged": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\debug\\drawable\\default_bt_color_tv.xml",
         "source": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\CarControl\\andframework-release\\unspecified\\res\\drawable\\default_bt_color_tv.xml"
+    },
+    {
+        "merged": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_ab_back_material.xml",
+        "source": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\drawable\\abc_ic_ab_back_material.xml"
     },
     {
         "merged": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
@@ -80,12 +80,12 @@
         "source": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\drawable\\abc_seekbar_track_material.xml"
     },
     {
-        "merged": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
-        "source": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\drawable\\abc_btn_colored_material.xml"
-    },
-    {
         "merged": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
         "source": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
+        "source": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\drawable\\abc_btn_colored_material.xml"
     },
     {
         "merged": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
@@ -266,6 +266,10 @@
     {
         "merged": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\debug\\drawable\\default_bg_regc_tra.xml",
         "source": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\CarControl\\andframework-release\\unspecified\\res\\drawable\\default_bg_regc_tra.xml"
+    },
+    {
+        "merged": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_hh.xml",
+        "source": "F:\\AsWork\\CarControl\\frameWidget\\src\\main\\res\\drawable\\shape_hh.xml"
     },
     {
         "merged": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",

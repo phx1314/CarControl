@@ -126,11 +126,11 @@ public class FrgMc extends BaseFrg {
                 mTextView_state.setText(mc);
                 break;
             case 120://有条件限制
-                changeStateImage(modelqueryState.content.leftFrontWindowState, mImageView_3, R.drawable.ic_control_window_selected, R.drawable.ic_control_window_nor, R.drawable.ic_control_window_slightly_selected);
-                changeStateImage(modelqueryState.content.rightFrontWindowState, mImageView_8, R.drawable.ic_control_window_selected, R.drawable.ic_control_window_nor, R.drawable.ic_control_window_slightly_selected);
-                changeStateImage(modelqueryState.content.leftRearWindowState, mImageView_4, R.drawable.ic_control_window_selected, R.drawable.ic_control_window_nor, R.drawable.ic_control_window_slightly_selected);
-                changeStateImage(modelqueryState.content.rightRearWindowState, mImageView_9, R.drawable.ic_control_window_selected, R.drawable.ic_control_window_nor, R.drawable.ic_control_window_slightly_selected);
-                changeStateImage(modelqueryState.content.trunk, mImageView_5, R.drawable.ic_control_trunk_selected, R.drawable.ic_control_trunk_nor);
+                if(mModelCz.leftFrontWindowState==-1)   changeStateImage(modelqueryState.content.leftFrontWindowState, mImageView_3, R.drawable.ic_control_window_selected, R.drawable.ic_control_window_nor, R.drawable.ic_control_window_slightly_selected);
+                if(mModelCz.rightFrontWindowState==-1) changeStateImage(modelqueryState.content.rightFrontWindowState, mImageView_8, R.drawable.ic_control_window_selected, R.drawable.ic_control_window_nor, R.drawable.ic_control_window_slightly_selected);
+                if(mModelCz.leftRearWindowState==-1) changeStateImage(modelqueryState.content.leftRearWindowState, mImageView_4, R.drawable.ic_control_window_selected, R.drawable.ic_control_window_nor, R.drawable.ic_control_window_slightly_selected);
+                if(mModelCz.rightRearWindowState==-1) changeStateImage(modelqueryState.content.rightRearWindowState, mImageView_9, R.drawable.ic_control_window_selected, R.drawable.ic_control_window_nor, R.drawable.ic_control_window_slightly_selected);
+                if(mModelCz.trunk==-1) changeStateImage(modelqueryState.content.trunk, mImageView_5, R.drawable.ic_control_trunk_selected, R.drawable.ic_control_trunk_nor);
                 break;
         }
     }

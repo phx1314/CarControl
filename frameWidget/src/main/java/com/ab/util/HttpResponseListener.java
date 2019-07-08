@@ -31,6 +31,7 @@ public class HttpResponseListener extends AbStringHttpResponseListener {
         this.isShow = isShow;
         try {
             dialog = new ProgressDialog(context);
+            dialog.setCancelable(false);
             dialog.setMessage("数据加载中，请稍后...");
         } catch (Exception e) {
             e.printStackTrace();

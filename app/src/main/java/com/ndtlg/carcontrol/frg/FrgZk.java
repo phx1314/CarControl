@@ -97,8 +97,10 @@ public class FrgZk extends BaseFrg {
                 mTextView_state.setText(zk);
                 break;
             case 120://有条件限制
-                changeStateImageAcc(modelqueryState.content.eState, mImageView1, R.drawable.ic_control_start_selected, R.drawable.ic_control_start_nor, R.drawable.ic_control_acc_selected);
-                changeStateImage(modelqueryState.content.lockCentral, mImageView2, R.drawable.ic_control_fortification_selected, R.drawable.ic_control_fortification_nor, mImageView3, R.drawable.ic_control_defending_selected, R.drawable.ic_control_defending_nor);
+                if (mModelCz.eState == -1)
+                    changeStateImageAcc(modelqueryState.content.eState, mImageView1, R.drawable.ic_control_start_selected, R.drawable.ic_control_start_nor, R.drawable.ic_control_acc_selected);
+                if (mModelCz.lockCentral == -1)
+                    changeStateImage(modelqueryState.content.lockCentral, mImageView2, R.drawable.ic_control_fortification_selected, R.drawable.ic_control_fortification_nor, mImageView3, R.drawable.ic_control_defending_selected, R.drawable.ic_control_defending_nor);
                 break;
             case 111://实时
                 doData();

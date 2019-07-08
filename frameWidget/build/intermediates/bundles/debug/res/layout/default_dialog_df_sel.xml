@@ -3,24 +3,22 @@
     xmlns:wheel="http://schemas.android.com/apk/res-auto"
     android:layout_width="@dimen/j320dp"
     android:layout_height="wrap_content"
-    android:background="@drawable/default_bg_regc_tra" >
+    android:background="@drawable/shape_hh">
 
     <LinearLayout
         android:id="@+id/layout"
         android:layout_width="match_parent"
         android:layout_height="@dimen/j40dp"
-        android:background="#d8d8d8"
-        android:gravity="center_vertical" >
+        android:gravity="center_vertical">
 
         <TextView
             android:id="@+id/title"
             android:layout_width="0dp"
             android:layout_height="@dimen/j40dp"
             android:layout_weight="1"
-            android:background="@android:color/transparent"
             android:gravity="center"
             android:paddingLeft="@dimen/j60dp"
-            android:textColor="#666666"
+            android:textColor="#fff"
             android:textSize="14sp" />
 
         <Button
@@ -30,17 +28,23 @@
             android:background="@android:color/transparent"
             android:gravity="center"
             android:text="@string/queding"
-            android:textColor="@drawable/default_bt_color_tv"
+            android:textColor="#ed2634"
             android:textSize="16sp" />
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/mImageView_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/layout"
+        android:background="@color/tyD1" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/layout"
+        android:layout_below="@+id/mImageView_line"
         android:layout_margin="1px"
-        android:background="#ffffff"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <com.mdx.framework.widget.spinnerwheel.WheelVerticalView
             android:id="@+id/first"
@@ -91,9 +95,5 @@
 
     </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1px"
-        android:background="#888888" />
 
 </RelativeLayout>

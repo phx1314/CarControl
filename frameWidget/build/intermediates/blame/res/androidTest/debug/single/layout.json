@@ -8,12 +8,12 @@
         "source": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\layout\\frg_pub_edt.xml"
     },
     {
-        "merged": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\divider.xml",
-        "source": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\layout\\divider.xml"
-    },
-    {
         "merged": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_img_show.xml",
         "source": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\layout\\item_img_show.xml"
+    },
+    {
+        "merged": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\divider.xml",
+        "source": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\layout\\divider.xml"
     },
     {
         "merged": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\page_list_footloadingview.xml",
@@ -44,16 +44,16 @@
         "source": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\layout\\item_imgshow_dialog.xml"
     },
     {
-        "merged": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\custom_toast_base.xml",
-        "source": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\CarControl\\andframework-release\\unspecified\\res\\layout\\custom_toast_base.xml"
+        "merged": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\divider.xml",
+        "source": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\layout\\divider.xml"
     },
     {
         "merged": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_action_mode_bar.xml",
         "source": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\layout\\abc_action_mode_bar.xml"
     },
     {
-        "merged": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\divider.xml",
-        "source": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\layout\\divider.xml"
+        "merged": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\custom_toast_base.xml",
+        "source": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\CarControl\\andframework-release\\unspecified\\res\\layout\\custom_toast_base.xml"
     },
     {
         "merged": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\photoshow_dia.xml",
@@ -108,20 +108,20 @@
         "source": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.1.1\\res\\layout\\design_navigation_item_separator.xml"
     },
     {
-        "merged": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\design_menu_item_action_area.xml",
-        "source": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.1.1\\res\\layout\\design_menu_item_action_area.xml"
-    },
-    {
         "merged": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\menu_left.xml",
         "source": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\layout\\menu_left.xml"
     },
     {
-        "merged": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\notification_template_part_time.xml",
-        "source": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\layout\\notification_template_part_time.xml"
+        "merged": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\design_menu_item_action_area.xml",
+        "source": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.1.1\\res\\layout\\design_menu_item_action_area.xml"
     },
     {
         "merged": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\slidingmenumain.xml",
         "source": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\layout\\slidingmenumain.xml"
+    },
+    {
+        "merged": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\notification_template_part_time.xml",
+        "source": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\layout\\notification_template_part_time.xml"
     },
     {
         "merged": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_gridphotochoose.xml",
@@ -164,12 +164,12 @@
         "source": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\CarControl\\andframework-release\\unspecified\\res\\layout\\baner_viewpager_cirle.xml"
     },
     {
-        "merged": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\default_act_loading.xml",
-        "source": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\CarControl\\andframework-release\\unspecified\\res\\layout\\default_act_loading.xml"
-    },
-    {
         "merged": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
         "source": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\default_act_loading.xml",
+        "source": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\CarControl\\andframework-release\\unspecified\\res\\layout\\default_act_loading.xml"
     },
     {
         "merged": "F:\\AsWork\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\default_actionbar.xml",
@@ -236,16 +236,16 @@
         "source": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\layout\\support_simple_spinner_dropdown_item.xml"
     },
     {
-        "merged": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\textview.xml",
-        "source": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\layout\\textview.xml"
+        "merged": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\design_layout_tab_text.xml",
+        "source": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.1.1\\res\\layout\\design_layout_tab_text.xml"
     },
     {
         "merged": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_alert_dialog_material.xml",
         "source": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\layout\\abc_alert_dialog_material.xml"
     },
     {
-        "merged": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\design_layout_tab_text.xml",
-        "source": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.1.1\\res\\layout\\design_layout_tab_text.xml"
+        "merged": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\textview.xml",
+        "source": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\bundles\\debug\\res\\layout\\textview.xml"
     },
     {
         "merged": "F:\\work\\CarControl\\frameWidget\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\design_navigation_menu_item.xml",
